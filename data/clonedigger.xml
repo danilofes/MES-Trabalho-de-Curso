@@ -1,0 +1,1634 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pmd-cpd>
+<duplication lines="40" tokens="0">
+<file line="119" path="/home/diego/ufmg/workspace/PasswordSafeSWT/src/org/pwsafe/passwordsafeswt/dto/PwsEntryDTO.java"/>
+<file line="177" path="/home/diego/ufmg/workspace/PasswordSafeLib/src/org/pwsafe/lib/datastore/PwsEntryBean.java"/>
+<codefragment>
+<![CDATA[
+	public String getUsername() {
+		return username;
+	public void setUsername(String username) {
+		this.username = username;
+    public String getTitle() {
+        return title;
+    public void setTitle(String title) {
+        this.title = title;
+    public String getUrl() {
+		return url;
+	public void setUrl(String url) {
+		this.url = url;
+	public String getAutotype() {
+		return autotype;
+	public void setAutotype(String autotype) {
+		this.autotype = autotype;
+	public Date getCreated() {
+		return created;
+	public void setCreated(Date created) {
+		this.created = created;
+	public Date getLastAccess() {
+		return lastAccess;
+	public void setLastAccess(Date lastAccess) {
+		this.lastAccess = lastAccess;
+	public Date getLastChange() {
+		return lastChange;
+	public void setLastChange(Date lastChange) {
+		this.lastChange = lastChange;
+	public Date getLastPwChange() {
+		return lastPwChange;
+	public void setLastPwChange(Date lastPwChange) {
+		this.lastPwChange = lastPwChange;
+	public Date getExpires() {
+		return expires;
+	public void setExpires(Date expires) {
+		this.expires = expires;
+    public String getVersion() {
+        return version;
+    public void setVersion(String version) {
+        this.version = version;
+]]>
+</codefragment>
+</duplication>
+<duplication lines="30" tokens="0">
+<file line="315" path="/home/diego/ufmg/workspace/PasswordSafeLib/src/org/pwsafe/lib/datastore/PwsEntryBean.java"/>
+<file line="320" path="/home/diego/ufmg/workspace/PasswordSafeLib/src/org/pwsafe/lib/datastore/PwsEntryBean.java"/>
+<codefragment>
+<![CDATA[
+		if (id == null) {
+			if (other.id != null)
+				return false;
+		} else if (!id.equals(other.id))
+			return false;
+		if (group == null) {
+			if (other.group != null)
+				return false;
+		} else if (!group.equals(other.group))
+			return false;
+		if (title == null) {
+			if (other.title != null)
+				return false;
+		} else if (!title.equals(other.title))
+			return false;
+		if (username == null) {
+			if (other.username != null)
+				return false;
+		} else if (!username.equals(other.username))
+			return false;
+		if (version == null) {
+			if (other.version != null)
+				return false;
+		} else if (!version.equals(other.version))
+			return false;
+		if (autotype == null) {
+			if (other.autotype != null)
+				return false;
+		} else if (!autotype.equals(other.autotype))
+			return false;
+]]>
+</codefragment>
+</duplication>
+<duplication lines="30" tokens="0">
+<file line="315" path="/home/diego/ufmg/workspace/PasswordSafeLib/src/org/pwsafe/lib/datastore/PwsEntryBean.java"/>
+<file line="325" path="/home/diego/ufmg/workspace/PasswordSafeLib/src/org/pwsafe/lib/datastore/PwsEntryBean.java"/>
+<codefragment>
+<![CDATA[
+		if (id == null) {
+			if (other.id != null)
+				return false;
+		} else if (!id.equals(other.id))
+			return false;
+		if (group == null) {
+			if (other.group != null)
+				return false;
+		} else if (!group.equals(other.group))
+			return false;
+		if (title == null) {
+			if (other.title != null)
+				return false;
+		} else if (!title.equals(other.title))
+			return false;
+		if (username == null) {
+			if (other.username != null)
+				return false;
+		} else if (!username.equals(other.username))
+			return false;
+		if (version == null) {
+			if (other.version != null)
+				return false;
+		} else if (!version.equals(other.version))
+			return false;
+		if (autotype == null) {
+			if (other.autotype != null)
+				return false;
+		} else if (!autotype.equals(other.autotype))
+			return false;
+]]>
+</codefragment>
+</duplication>
+<duplication lines="30" tokens="0">
+<file line="315" path="/home/diego/ufmg/workspace/PasswordSafeLib/src/org/pwsafe/lib/datastore/PwsEntryBean.java"/>
+<file line="330" path="/home/diego/ufmg/workspace/PasswordSafeLib/src/org/pwsafe/lib/datastore/PwsEntryBean.java"/>
+<codefragment>
+<![CDATA[
+		if (id == null) {
+			if (other.id != null)
+				return false;
+		} else if (!id.equals(other.id))
+			return false;
+		if (group == null) {
+			if (other.group != null)
+				return false;
+		} else if (!group.equals(other.group))
+			return false;
+		if (title == null) {
+			if (other.title != null)
+				return false;
+		} else if (!title.equals(other.title))
+			return false;
+		if (username == null) {
+			if (other.username != null)
+				return false;
+		} else if (!username.equals(other.username))
+			return false;
+		if (version == null) {
+			if (other.version != null)
+				return false;
+		} else if (!version.equals(other.version))
+			return false;
+		if (autotype == null) {
+			if (other.autotype != null)
+				return false;
+		} else if (!autotype.equals(other.autotype))
+			return false;
+]]>
+</codefragment>
+</duplication>
+<duplication lines="30" tokens="0">
+<file line="315" path="/home/diego/ufmg/workspace/PasswordSafeLib/src/org/pwsafe/lib/datastore/PwsEntryBean.java"/>
+<file line="335" path="/home/diego/ufmg/workspace/PasswordSafeLib/src/org/pwsafe/lib/datastore/PwsEntryBean.java"/>
+<codefragment>
+<![CDATA[
+		if (id == null) {
+			if (other.id != null)
+				return false;
+		} else if (!id.equals(other.id))
+			return false;
+		if (group == null) {
+			if (other.group != null)
+				return false;
+		} else if (!group.equals(other.group))
+			return false;
+		if (title == null) {
+			if (other.title != null)
+				return false;
+		} else if (!title.equals(other.title))
+			return false;
+		if (username == null) {
+			if (other.username != null)
+				return false;
+		} else if (!username.equals(other.username))
+			return false;
+		if (version == null) {
+			if (other.version != null)
+				return false;
+		} else if (!version.equals(other.version))
+			return false;
+		if (autotype == null) {
+			if (other.autotype != null)
+				return false;
+		} else if (!autotype.equals(other.autotype))
+			return false;
+]]>
+</codefragment>
+</duplication>
+<duplication lines="30" tokens="0">
+<file line="315" path="/home/diego/ufmg/workspace/PasswordSafeLib/src/org/pwsafe/lib/datastore/PwsEntryBean.java"/>
+<file line="340" path="/home/diego/ufmg/workspace/PasswordSafeLib/src/org/pwsafe/lib/datastore/PwsEntryBean.java"/>
+<codefragment>
+<![CDATA[
+		if (id == null) {
+			if (other.id != null)
+				return false;
+		} else if (!id.equals(other.id))
+			return false;
+		if (group == null) {
+			if (other.group != null)
+				return false;
+		} else if (!group.equals(other.group))
+			return false;
+		if (title == null) {
+			if (other.title != null)
+				return false;
+		} else if (!title.equals(other.title))
+			return false;
+		if (username == null) {
+			if (other.username != null)
+				return false;
+		} else if (!username.equals(other.username))
+			return false;
+		if (version == null) {
+			if (other.version != null)
+				return false;
+		} else if (!version.equals(other.version))
+			return false;
+		if (autotype == null) {
+			if (other.autotype != null)
+				return false;
+		} else if (!autotype.equals(other.autotype))
+			return false;
+]]>
+</codefragment>
+</duplication>
+<duplication lines="26" tokens="0">
+<file line="527" path="/home/diego/ufmg/workspace/PasswordSafeLib/src/org/pwsafe/lib/datastore/PwsEntryBean.java"/>
+<file line="265" path="/home/diego/ufmg/workspace/PasswordSafeSWT/src/org/pwsafe/passwordsafeswt/dto/PwsEntryDTO.java"/>
+<codefragment>
+<![CDATA[
+        	PwsRecordV3 v3 = (PwsRecordV3) nextRecord;
+
+
+            PwsUUIDField idField = (PwsUUIDField) v3.getField(PwsFieldTypeV3.UUID);
+            if (idField != null)
+            	newEntry.setId((UUID) idField.getValue());
+
+
+            String groupName = getSafeValue(v3, PwsFieldTypeV3.GROUP);
+            newEntry.setGroup(groupName);
+
+
+            String title = getSafeValue(v3,PwsFieldTypeV3.TITLE);
+            newEntry.setTitle(title);
+
+
+            String user = getSafeValue(v3, PwsFieldTypeV3.USERNAME);
+            newEntry.setUsername(user);
+
+
+            String password = getSafeValue(v3,PwsFieldTypeV3.PASSWORD);
+            newEntry.setPassword(new StringBuilder(password)); // TODO: change PwsRecord to StringBuilder as well?
+
+
+            String notes = getSafeValue(v3,PwsFieldTypeV3.NOTES);
+            newEntry.setNotes(notes);
+
+
+            String url = getSafeValue(v3,PwsFieldTypeV3.URL);
+            newEntry.setUrl(url);
+
+
+            String autotype = getSafeValue(v3,PwsFieldTypeV3.AUTOTYPE);
+            newEntry.setAutotype(autotype);
+
+
+            newEntry.setLastChange(getSafeDate(v3, PwsFieldTypeV3.LAST_MOD_TIME));
+
+
+            newEntry.setCreated(getSafeDate(v3, PwsFieldTypeV3.CREATION_TIME));
+
+
+            newEntry.setLastAccess(getSafeDate(v3, PwsFieldTypeV3.LAST_ACCESS_TIME));
+
+
+            newEntry.setLastPwChange(getSafeDate(v3, PwsFieldTypeV3.PASSWORD_MOD_TIME));
+
+
+           	newEntry.setExpires(getSafeDate(v3, PwsFieldTypeV3.PASSWORD_LIFETIME));
+
+
+            newEntry.setVersion("3");
+
+
+            if (log.isDebugEnabled())
+            	log.debug("PwsEntryBean created " + newEntry.toString());
+]]>
+</codefragment>
+</duplication>
+<duplication lines="25" tokens="0">
+<file line="315" path="/home/diego/ufmg/workspace/PasswordSafeLib/src/org/pwsafe/lib/datastore/PwsEntryBean.java"/>
+<file line="345" path="/home/diego/ufmg/workspace/PasswordSafeLib/src/org/pwsafe/lib/datastore/PwsEntryBean.java"/>
+<codefragment>
+<![CDATA[
+		if (id == null) {
+			if (other.id != null)
+				return false;
+		} else if (!id.equals(other.id))
+			return false;
+		if (group == null) {
+			if (other.group != null)
+				return false;
+		} else if (!group.equals(other.group))
+			return false;
+		if (title == null) {
+			if (other.title != null)
+				return false;
+		} else if (!title.equals(other.title))
+			return false;
+		if (username == null) {
+			if (other.username != null)
+				return false;
+		} else if (!username.equals(other.username))
+			return false;
+		if (version == null) {
+			if (other.version != null)
+				return false;
+		} else if (!version.equals(other.version))
+			return false;
+]]>
+</codefragment>
+</duplication>
+<duplication lines="23" tokens="0">
+<file line="569" path="/home/diego/ufmg/workspace/PasswordSafeLib/src/org/pwsafe/lib/datastore/PwsEntryBean.java"/>
+<file line="307" path="/home/diego/ufmg/workspace/PasswordSafeSWT/src/org/pwsafe/passwordsafeswt/dto/PwsEntryDTO.java"/>
+<codefragment>
+<![CDATA[
+        } else if (nextRecord instanceof PwsRecordV2) {
+
+
+            PwsRecordV2 v2 = (PwsRecordV2) nextRecord;
+
+
+            String groupName = getSafeValue(v2, PwsFieldTypeV2.GROUP);
+            newEntry.setGroup(groupName);
+
+
+            String title = getSafeValue(v2,PwsFieldTypeV2.TITLE);
+            newEntry.setTitle(title);
+
+
+            String user = getSafeValue(v2, PwsFieldTypeV2.USERNAME);
+            newEntry.setUsername(user);
+
+
+            String password = getSafeValue(v2,PwsFieldTypeV2.PASSWORD);
+            newEntry.setPassword(new StringBuilder(password));
+
+
+            String notes = getSafeValue(v2,PwsFieldTypeV2.NOTES);
+            newEntry.setNotes(notes);
+
+
+            newEntry.setVersion("2");
+
+
+        } else {
+            PwsRecordV1 v1 = (PwsRecordV1) nextRecord;
+
+
+            String title = getSafeValue(v1,PwsFieldTypeV1.TITLE);
+            newEntry.setTitle(title);
+
+
+            String user = getSafeValue(v1,PwsFieldTypeV1.USERNAME);
+            newEntry.setUsername(user);
+
+
+            String password = getSafeValue(v1,PwsFieldTypeV1.PASSWORD);
+            newEntry.setPassword(new StringBuilder(password));
+
+
+            String notes = getSafeValue(v1,PwsFieldTypeV1.NOTES);
+            newEntry.setNotes(notes);
+
+
+            newEntry.setVersion("1");
+]]>
+</codefragment>
+</duplication>
+<duplication lines="23" tokens="0">
+<file line="386" path="/home/diego/ufmg/workspace/PasswordSafeLib/src/org/pwsafe/lib/datastore/PwsEntryBean.java"/>
+<file line="214" path="/home/diego/ufmg/workspace/PasswordSafeSWT/src/org/pwsafe/passwordsafeswt/dto/PwsEntryDTO.java"/>
+<codefragment>
+<![CDATA[
+	@Override
+	public String toString() {
+		StringBuffer all = new StringBuffer (200);
+		all.append("PwsEntryBean ").append(version).append(": ID ");
+		all.append(id != null ? id.toString() : null);
+		all.append(", Group ").append(group);
+		all.append(", Title ").append(title);
+		all.append(", User ").append(username);
+		all.append(", Notes ").append(notes);
+		all.append(", Url ").append(url);
+		all.append(", Created ").append(created);
+		all.append(", Changed ").append(lastChange);
+		all.append(", Expires ").append(expires);
+		return all.toString();
+    public static String getSafeValue(PwsRecord record, PwsFieldType aType) {
+    	String fieldValue = "";
+    	PwsField field = record.getField(aType);
+    	if (field != null && field.getValue() != null) {
+    		fieldValue = field.getValue().toString();
+    	}
+    	return fieldValue;
+	public static Date getSafeDate(final PwsRecordV3 v3, final PwsFieldType aType) {
+		final PwsTimeField field = (PwsTimeField) v3.getField(aType);
+
+
+		return field != null ? (Date) field.getValue() : null;
+]]>
+</codefragment>
+</duplication>
+<duplication lines="20" tokens="0">
+<file line="345" path="/home/diego/ufmg/workspace/PasswordSafeLib/src/org/pwsafe/lib/datastore/PwsEntryBean.java"/>
+<file line="350" path="/home/diego/ufmg/workspace/PasswordSafeLib/src/org/pwsafe/lib/datastore/PwsEntryBean.java"/>
+<codefragment>
+<![CDATA[
+		if (created == null) {
+			if (other.created != null)
+				return false;
+		} else if (!created.equals(other.created))
+			return false;
+		if (expires == null) {
+			if (other.expires != null)
+				return false;
+		} else if (!expires.equals(other.expires))
+			return false;
+		if (lastChange == null) {
+			if (other.lastChange != null)
+				return false;
+		} else if (!lastChange.equals(other.lastChange))
+			return false;
+		if (lastPwChange == null) {
+			if (other.lastPwChange != null)
+				return false;
+		} else if (!lastPwChange.equals(other.lastPwChange))
+			return false;
+]]>
+</codefragment>
+</duplication>
+<duplication lines="20" tokens="0">
+<file line="315" path="/home/diego/ufmg/workspace/PasswordSafeLib/src/org/pwsafe/lib/datastore/PwsEntryBean.java"/>
+<file line="350" path="/home/diego/ufmg/workspace/PasswordSafeLib/src/org/pwsafe/lib/datastore/PwsEntryBean.java"/>
+<codefragment>
+<![CDATA[
+		if (id == null) {
+			if (other.id != null)
+				return false;
+		} else if (!id.equals(other.id))
+			return false;
+		if (group == null) {
+			if (other.group != null)
+				return false;
+		} else if (!group.equals(other.group))
+			return false;
+		if (title == null) {
+			if (other.title != null)
+				return false;
+		} else if (!title.equals(other.title))
+			return false;
+		if (username == null) {
+			if (other.username != null)
+				return false;
+		} else if (!username.equals(other.username))
+			return false;
+]]>
+</codefragment>
+</duplication>
+<duplication lines="19" tokens="0">
+<file line="116" path="/home/diego/ufmg/workspace/PasswordSafeLib/src/org/pwsafe/util/FileConverter.java"/>
+<file line="75" path="/home/diego/ufmg/workspace/PasswordSafeLib/src/org/pwsafe/util/FileConverter.java"/>
+<codefragment>
+<![CDATA[
+	public static PwsFile convertV2ToV1( PwsFileV2 oldFile )
+	throws IOException, PasswordSafeException
+	{
+		PwsFileV1	newFile;
+		PwsRecordV2	oldRec;
+		PwsRecord	newRec;
+
+
+		newFile = new PwsFileV1();
+
+
+		newFile.setPassphrase( new StringBuilder(oldFile.getPassphrase()) );
+		PwsFileStorage oldStorage = (PwsFileStorage) oldFile.getStorage();
+		PwsFileStorage newStorage = new PwsFileStorage(makeNewFilename(oldStorage.getFilename(), "v1-"));
+		newFile.setStorage( newStorage );
+		for ( Iterator iter = oldFile.getRecords(); iter.hasNext(); )
+		{
+			oldRec	= (PwsRecordV2) iter.next();
+			newRec	= newFile.newRecord();
+
+
+			newRec.setField( oldRec.getField(PwsRecordV2.TITLE) );
+			newRec.setField( oldRec.getField(PwsRecordV2.USERNAME) );
+			newRec.setField( oldRec.getField(PwsRecordV2.PASSWORD) );
+			newRec.setField( oldRec.getField(PwsRecordV2.NOTES) );
+			newFile.add(newRec);
+		}
+		return newFile;
+]]>
+</codefragment>
+</duplication>
+<duplication lines="19" tokens="0">
+<file line="125" path="/home/diego/ufmg/workspace/PasswordSafeLib/test/org/pwsafe/lib/datastore/PwsDataStoreTest.java"/>
+<file line="95" path="/home/diego/ufmg/workspace/PasswordSafeLib/test/org/pwsafe/lib/datastore/PwsDataStoreTest.java"/>
+<codefragment>
+<![CDATA[
+	public void testNewV1Entry () throws Exception {
+		PwsFileV1	file = new PwsFileV1();
+
+
+		PwsRecordV1 aRecord = (PwsRecordV1) file.newRecord() ;
+		
+
+		PwsEntryBean entry = PwsEntryBean.fromPwsRecord(aRecord);
+		entry.setTitle("fromTitle");
+		entry.setUsername("fromName");
+
+
+		entry.toPwsRecord(aRecord);
+		assertEquals("fromTitle", aRecord.getField(PwsFieldTypeV3.TITLE).toString());
+		assertEquals("fromName", aRecord.getField(PwsFieldTypeV3.USERNAME).toString());
+
+
+		assertEquals(entry, PwsEntryBean.fromPwsRecord(aRecord));
+		entry = PwsEntryBean.fromPwsRecord(aRecord);
+		assertEquals("fromTitle", entry.getTitle());
+		assertEquals("fromName", entry.getUsername());
+	
+
+		entry = new PwsEntryBean();
+		entry.setTitle("fromTitle");
+		entry.setPassword(new StringBuilder("fromPassword"));
+		aRecord = (PwsRecordV1) file.newRecord();
+		entry.toPwsRecord(aRecord);
+		
+
+		assertEquals("fromPassword", aRecord.getField(PwsFieldTypeV3.PASSWORD).toString());
+]]>
+</codefragment>
+</duplication>
+<duplication lines="17" tokens="0">
+<file line="61" path="/home/diego/ufmg/workspace/PasswordSafeSWT/src/org/pwsafe/passwordsafeswt/action/CopyURLAction.java"/>
+<file line="38" path="/home/diego/ufmg/workspace/PasswordSafeSWT/src/org/pwsafe/passwordsafeswt/action/CopyUsernameAction.java"/>
+<codefragment>
+<![CDATA[
+    @Override
+	public void run() {
+        // TODO: disable option if v1 or v2; URL only seems to be available in V3 files
+        final PasswordSafeJFace app = PasswordSafeJFace.getApp();
+
+
+        final PwsEntryBean selected = app.getSelectedRecord();
+        if (selected == null)
+        	return;
+        
+
+        // TODO: only fetch a filled entry if URL is not part of sparse fields.
+        PwsEntryBean theEntry;
+        if (selected.getUrl() != null && selected.getUrl().length() > 0) {
+        	theEntry = selected;
+        } else {// retrieve filled Entry for sparse
+        	theEntry = app.getPwsDataStore().getEntry(selected.getStoreIndex());
+        }
+
+
+        Clipboard cb = new Clipboard(app.getShell().getDisplay());
+
+
+        app.copyToClipboard(cb, theEntry.getUrl() );
+
+
+        final IPreferenceStore thePrefs = JFacePreferences.getPreferenceStore();
+        final boolean recordAccessTime =  thePrefs.getBoolean(JpwPreferenceConstants.RECORD_LAST_ACCESS_TIME);
+        if (recordAccessTime) { // this could/should be sent to a background thread
+        	app.updateAccessTime(theEntry);
+        }
+
+
+        cb.dispose();
+]]>
+</codefragment>
+</duplication>
+<duplication lines="16" tokens="0">
+<file line="72" path="/home/diego/ufmg/workspace/PasswordSafeSWT/src/org/pwsafe/passwordsafeswt/dto/PwsEntryDTO.java"/>
+<file line="120" path="/home/diego/ufmg/workspace/PasswordSafeLib/src/org/pwsafe/lib/datastore/PwsEntryBean.java"/>
+<codefragment>
+<![CDATA[
+	public UUID getId() {
+		return id;
+	public void setId(UUID id) {
+		this.id = id;
+	public String getGroup() {
+		return group;
+	public void setGroup(String group) {
+		this.group = group;
+	public String getNotes() {
+		return notes;
+	public void setNotes(String notes) {
+		this.notes = notes;
+	public String getPassword() {
+		return password;
+	public void setPassword(String password) {
+		this.password = password;
+]]>
+</codefragment>
+</duplication>
+<duplication lines="15" tokens="0">
+<file line="170" path="/home/diego/ufmg/workspace/PasswordSafeLib/src/org/pwsafe/lib/file/PwsRecordV2.java"/>
+<file line="229" path="/home/diego/ufmg/workspace/PasswordSafeLib/src/org/pwsafe/lib/file/PwsRecordV3.java"/>
+<codefragment>
+<![CDATA[
+	@Override
+	public Object clone()
+	{
+		return new PwsRecordV2( this );
+	@Override
+	public int compareTo( Object other )
+	{
+		// TODO Implement me
+		return 0;
+	@Override
+	public boolean equals( Object that )
+	{
+		UUID	thisUUID;
+		UUID	thatUUID;
+
+
+		if (that instanceof PwsRecordV2) {
+			thisUUID = (UUID) ((PwsUUIDField) getField( UUID )).getValue();
+			thatUUID = (UUID) ((PwsUUIDField) ((PwsRecord) that).getField( UUID )).getValue();
+
+
+			return thisUUID.equals( thatUUID );
+		} else {
+			return false;
+]]>
+</codefragment>
+</duplication>
+<duplication lines="15" tokens="0">
+<file line="345" path="/home/diego/ufmg/workspace/PasswordSafeLib/src/org/pwsafe/lib/datastore/PwsEntryBean.java"/>
+<file line="355" path="/home/diego/ufmg/workspace/PasswordSafeLib/src/org/pwsafe/lib/datastore/PwsEntryBean.java"/>
+<codefragment>
+<![CDATA[
+		if (created == null) {
+			if (other.created != null)
+				return false;
+		} else if (!created.equals(other.created))
+			return false;
+		if (expires == null) {
+			if (other.expires != null)
+				return false;
+		} else if (!expires.equals(other.expires))
+			return false;
+		if (lastChange == null) {
+			if (other.lastChange != null)
+				return false;
+		} else if (!lastChange.equals(other.lastChange))
+			return false;
+]]>
+</codefragment>
+</duplication>
+<duplication lines="15" tokens="0">
+<file line="315" path="/home/diego/ufmg/workspace/PasswordSafeLib/src/org/pwsafe/lib/datastore/PwsEntryBean.java"/>
+<file line="355" path="/home/diego/ufmg/workspace/PasswordSafeLib/src/org/pwsafe/lib/datastore/PwsEntryBean.java"/>
+<codefragment>
+<![CDATA[
+		if (id == null) {
+			if (other.id != null)
+				return false;
+		} else if (!id.equals(other.id))
+			return false;
+		if (group == null) {
+			if (other.group != null)
+				return false;
+		} else if (!group.equals(other.group))
+			return false;
+		if (title == null) {
+			if (other.title != null)
+				return false;
+		} else if (!title.equals(other.title))
+			return false;
+]]>
+</codefragment>
+</duplication>
+<duplication lines="14" tokens="0">
+<file line="306" path="/home/diego/ufmg/workspace/PasswordSafeLib/src/org/pwsafe/lib/datastore/PwsEntryBean.java"/>
+<file line="116" path="/home/diego/ufmg/workspace/PasswordSafeLib/src/org/pwsafe/lib/file/PwsField.java"/>
+<codefragment>
+<![CDATA[
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		PwsEntryBean other = (PwsEntryBean) obj;
+		if (storeIndex != other.storeIndex)
+			return false;
+		if (id == null) {
+			if (other.id != null)
+				return false;
+		} else if (!id.equals(other.id))
+			return false;
+]]>
+</codefragment>
+</duplication>
+<duplication lines="13" tokens="0">
+<file line="87" path="/home/diego/ufmg/workspace/PasswordSafeLib/src/org/pwsafe/lib/file/PwsIntegerField.java"/>
+<file line="89" path="/home/diego/ufmg/workspace/PasswordSafeLib/src/org/pwsafe/lib/file/PwsUUIDField.java"/>
+<codefragment>
+<![CDATA[
+	public int compareTo( Object other )
+	{
+		return ((Integer) getValue()).compareTo((Integer) ((PwsIntegerField) other).getValue());
+	@Override
+	public boolean equals( Object arg0 )
+	{
+		if ( arg0 instanceof PwsIntegerField )
+		{
+			return equals( (PwsIntegerField) arg0 );
+		}
+		else if ( arg0 instanceof Integer )
+		{
+			return equals( (Integer) arg0 );
+		}
+		throw new ClassCastException();
+	public boolean equals( PwsIntegerField arg0 )
+	{
+		return ((Integer) getValue()).equals(arg0.getValue());
+	public boolean equals( Integer arg0 )
+	{
+		return ((Integer) getValue()).equals(arg0);
+]]>
+</codefragment>
+</duplication>
+<duplication lines="13" tokens="0">
+<file line="72" path="/home/diego/ufmg/workspace/PasswordSafeLib/src/org/pwsafe/lib/file/PwsStringField.java"/>
+<file line="102" path="/home/diego/ufmg/workspace/PasswordSafeLib/src/org/pwsafe/lib/file/PwsTimeField.java"/>
+<codefragment>
+<![CDATA[
+	public int compareTo( Object that )
+	{
+		return ((String) this.getValue()).compareTo((String) ((PwsStringField) that).getValue());
+	@Override
+	public boolean equals( Object arg0 )
+	{
+		if ( arg0 instanceof PwsStringField )
+		{
+			return equals( (PwsStringField) arg0 );
+		}
+		else if ( arg0 instanceof String )
+		{
+			return equals( (String) arg0 );
+		}
+		throw new ClassCastException();
+	public boolean equals( PwsStringField arg0 )
+	{
+		return ((String) super.getValue()).equals(arg0.getValue());
+	public boolean equals( String arg0 )
+	{
+		return ((String) super.getValue()).equals(arg0);
+]]>
+</codefragment>
+</duplication>
+<duplication lines="13" tokens="0">
+<file line="72" path="/home/diego/ufmg/workspace/PasswordSafeLib/src/org/pwsafe/lib/file/PwsStringField.java"/>
+<file line="108" path="/home/diego/ufmg/workspace/PasswordSafeLib/src/org/pwsafe/lib/file/PwsStringUnicodeField.java"/>
+<codefragment>
+<![CDATA[
+	public int compareTo( Object that )
+	{
+		return ((String) this.getValue()).compareTo((String) ((PwsStringField) that).getValue());
+	@Override
+	public boolean equals( Object arg0 )
+	{
+		if ( arg0 instanceof PwsStringField )
+		{
+			return equals( (PwsStringField) arg0 );
+		}
+		else if ( arg0 instanceof String )
+		{
+			return equals( (String) arg0 );
+		}
+		throw new ClassCastException();
+	public boolean equals( PwsStringField arg0 )
+	{
+		return ((String) super.getValue()).equals(arg0.getValue());
+	public boolean equals( String arg0 )
+	{
+		return ((String) super.getValue()).equals(arg0);
+]]>
+</codefragment>
+</duplication>
+<duplication lines="13" tokens="0">
+<file line="72" path="/home/diego/ufmg/workspace/PasswordSafeLib/src/org/pwsafe/lib/file/PwsStringField.java"/>
+<file line="89" path="/home/diego/ufmg/workspace/PasswordSafeLib/src/org/pwsafe/lib/file/PwsUUIDField.java"/>
+<codefragment>
+<![CDATA[
+	public int compareTo( Object that )
+	{
+		return ((String) this.getValue()).compareTo((String) ((PwsStringField) that).getValue());
+	@Override
+	public boolean equals( Object arg0 )
+	{
+		if ( arg0 instanceof PwsStringField )
+		{
+			return equals( (PwsStringField) arg0 );
+		}
+		else if ( arg0 instanceof String )
+		{
+			return equals( (String) arg0 );
+		}
+		throw new ClassCastException();
+	public boolean equals( PwsStringField arg0 )
+	{
+		return ((String) super.getValue()).equals(arg0.getValue());
+	public boolean equals( String arg0 )
+	{
+		return ((String) super.getValue()).equals(arg0);
+]]>
+</codefragment>
+</duplication>
+<duplication lines="13" tokens="0">
+<file line="102" path="/home/diego/ufmg/workspace/PasswordSafeLib/src/org/pwsafe/lib/file/PwsTimeField.java"/>
+<file line="108" path="/home/diego/ufmg/workspace/PasswordSafeLib/src/org/pwsafe/lib/file/PwsStringUnicodeField.java"/>
+<codefragment>
+<![CDATA[
+	public int compareTo( Object that )
+	{
+		return ((Date) this.getValue()).compareTo((Date) ((PwsTimeField) that).getValue());
+	@Override
+	public boolean equals( Object arg0 )
+	{
+		if ( arg0 instanceof PwsTimeField )
+		{
+			return equals( (PwsTimeField) arg0 );
+		}
+		else if ( arg0 instanceof Date )
+		{
+			return equals( (Date) arg0 );
+		}
+		throw new ClassCastException();
+	public boolean equals( PwsTimeField arg0 )
+	{
+		return ((Date) getValue()).equals(arg0.getValue());
+	public boolean equals( Date arg0 )
+	{
+		return ((Date) getValue()).equals(arg0);
+]]>
+</codefragment>
+</duplication>
+<duplication lines="13" tokens="0">
+<file line="102" path="/home/diego/ufmg/workspace/PasswordSafeLib/src/org/pwsafe/lib/file/PwsTimeField.java"/>
+<file line="89" path="/home/diego/ufmg/workspace/PasswordSafeLib/src/org/pwsafe/lib/file/PwsUUIDField.java"/>
+<codefragment>
+<![CDATA[
+	public int compareTo( Object that )
+	{
+		return ((Date) this.getValue()).compareTo((Date) ((PwsTimeField) that).getValue());
+	@Override
+	public boolean equals( Object arg0 )
+	{
+		if ( arg0 instanceof PwsTimeField )
+		{
+			return equals( (PwsTimeField) arg0 );
+		}
+		else if ( arg0 instanceof Date )
+		{
+			return equals( (Date) arg0 );
+		}
+		throw new ClassCastException();
+	public boolean equals( PwsTimeField arg0 )
+	{
+		return ((Date) getValue()).equals(arg0.getValue());
+	public boolean equals( Date arg0 )
+	{
+		return ((Date) getValue()).equals(arg0);
+]]>
+</codefragment>
+</duplication>
+<duplication lines="13" tokens="0">
+<file line="108" path="/home/diego/ufmg/workspace/PasswordSafeLib/src/org/pwsafe/lib/file/PwsStringUnicodeField.java"/>
+<file line="89" path="/home/diego/ufmg/workspace/PasswordSafeLib/src/org/pwsafe/lib/file/PwsUUIDField.java"/>
+<codefragment>
+<![CDATA[
+	public int compareTo( Object that )
+	{
+		return ((String) this.getValue()).compareTo((String) ((PwsStringUnicodeField) that).getValue());
+	@Override
+	public boolean equals( Object arg0 )
+	{
+		if ( arg0 instanceof PwsStringUnicodeField )
+		{
+			return equals( (PwsStringUnicodeField) arg0 );
+		}
+		else if ( arg0 instanceof String )
+		{
+			return equals( (String) arg0 );
+		}
+		throw new ClassCastException();
+	public boolean equals( PwsStringUnicodeField arg0 )
+	{
+		return ((String) super.getValue()).equals(arg0.getValue());
+	public boolean equals( String arg0 )
+	{
+		return ((String) super.getValue()).equals(arg0);
+]]>
+</codefragment>
+</duplication>
+<duplication lines="13" tokens="0">
+<file line="81" path="/home/diego/ufmg/workspace/PasswordSafeLib/test/org/pwsafe/lib/file/PwsFileFactoryTest.java"/>
+<file line="106" path="/home/diego/ufmg/workspace/PasswordSafeLib/test/org/pwsafe/lib/file/PwsFileV3Test.java"/>
+<codefragment>
+<![CDATA[
+		File file = new File(testV2Filename);
+		file.setLastModified(System.currentTimeMillis() + 1000);
+		pwsFile.setModified();
+		try {
+			pwsFile.save();
+			fail("save concurrently modified file without exception");
+		} catch (ConcurrentModificationException e) {
+		file.setLastModified(System.currentTimeMillis() + 2000);
+		pwsFile.setModified();
+		try {
+			pwsFile.save();
+			fail("save concurrently modified file without exception");
+		} catch (ConcurrentModificationException e) {
+]]>
+</codefragment>
+</duplication>
+<duplication lines="13" tokens="0">
+<file line="53" path="/home/diego/ufmg/workspace/PasswordSafeSWT/src/org/pwsafe/passwordsafeswt/model/PasswordTableLabelProvider.java"/>
+<file line="68" path="/home/diego/ufmg/workspace/PasswordSafeSWT/src/org/pwsafe/passwordsafeswt/model/PasswordTableLabelProvider.java"/>
+<codefragment>
+<![CDATA[
+			PwsRecordV3 v3 = (PwsRecordV3) element;
+			switch(columnIndex) {
+				case 0:
+					columnString =  PwsEntryBean.getSafeValue(v3,PwsFieldTypeV3.TITLE);
+					break;
+			    case 1:
+			    	columnString =  PwsEntryBean.getSafeValue(v3,PwsFieldTypeV3.USERNAME);
+			    	break;
+			    case 2:
+			    	columnString = PwsEntryBean.getSafeValue(v3,PwsFieldTypeV3.NOTES);
+			    	break;
+			    case 3:
+			    	columnString = PwsEntryBean.getSafeValue(v3,PwsFieldTypeV3.PASSWORD);
+]]>
+</codefragment>
+</duplication>
+<duplication lines="13" tokens="0">
+<file line="87" path="/home/diego/ufmg/workspace/PasswordSafeLib/src/org/pwsafe/lib/file/PwsIntegerField.java"/>
+<file line="102" path="/home/diego/ufmg/workspace/PasswordSafeLib/src/org/pwsafe/lib/file/PwsTimeField.java"/>
+<codefragment>
+<![CDATA[
+	public int compareTo( Object other )
+	{
+		return ((Integer) getValue()).compareTo((Integer) ((PwsIntegerField) other).getValue());
+	@Override
+	public boolean equals( Object arg0 )
+	{
+		if ( arg0 instanceof PwsIntegerField )
+		{
+			return equals( (PwsIntegerField) arg0 );
+		}
+		else if ( arg0 instanceof Integer )
+		{
+			return equals( (Integer) arg0 );
+		}
+		throw new ClassCastException();
+	public boolean equals( PwsIntegerField arg0 )
+	{
+		return ((Integer) getValue()).equals(arg0.getValue());
+	public boolean equals( Integer arg0 )
+	{
+		return ((Integer) getValue()).equals(arg0);
+]]>
+</codefragment>
+</duplication>
+<duplication lines="12" tokens="0">
+<file line="501" path="/home/diego/ufmg/workspace/PasswordSafeLib/src/org/pwsafe/lib/datastore/PwsEntryBean.java"/>
+<file line="389" path="/home/diego/ufmg/workspace/PasswordSafeSWT/src/org/pwsafe/passwordsafeswt/dto/PwsEntryDTO.java"/>
+<codefragment>
+<![CDATA[
+		} else if (nextRecord instanceof PwsRecordV2) {
+
+
+            PwsRecordV2 v2 = (PwsRecordV2) nextRecord;
+            v2.setField(new PwsStringField(PwsRecordV2.GROUP , getGroup()));
+            v2.setField(new PwsStringField(PwsRecordV2.TITLE , getTitle()));
+            v2.setField(new PwsStringField(PwsRecordV2.USERNAME , getUsername()));
+            v2.setField(new PwsStringField(PwsRecordV2.PASSWORD , getPassword().toString()));
+            v2.setField(new PwsStringField(PwsRecordV2.NOTES , getNotes()));
+
+
+        } else {
+
+
+            PwsRecordV1 v1 = (PwsRecordV1) nextRecord;
+            v1.setField(new PwsStringField(PwsRecordV1.TITLE , getTitle()));
+            v1.setField(new PwsStringField(PwsRecordV1.USERNAME , getUsername()));
+            v1.setField(new PwsStringField(PwsRecordV1.PASSWORD , getPassword().toString()));
+            v1.setField(new PwsStringField(PwsRecordV1.NOTES , getNotes()));
+]]>
+</codefragment>
+</duplication>
+<duplication lines="12" tokens="0">
+<file line="22" path="/home/diego/ufmg/workspace/PasswordSafeSWT/src/org/pwsafe/passwordsafeswt/action/ImportFromXMLAction.java"/>
+<file line="22" path="/home/diego/ufmg/workspace/PasswordSafeSWT/src/org/pwsafe/passwordsafeswt/action/ImportFromTextAction.java"/>
+<codefragment>
+<![CDATA[
+public class ImportFromXMLAction extends Action {
+
+
+	public ImportFromXMLAction() {
+		super(Messages.getString("ImportFromXMLAction.Label")); //$NON-NLS-1$
+	}
+	
+
+	/**
+	 * @see org.eclipse.jface.action.Action#run()
+	 */
+	public void run() {
+		PasswordSafeJFace app = PasswordSafeJFace.getApp();
+    	FileDialog fod = new FileDialog(app.getShell(), SWT.OPEN);
+    	String fileName = fod.open();
+		if (fileName != null) {
+	
+
+				try {
+					app.importFromXML(fileName);
+				} catch (Exception e) {
+					app.displayErrorDialog(Messages.getString("ImportFromXMLAction.ErrorDialog.Title"), Messages.getString("ImportFromXMLAction.ErrorDialog.Message"), e); //$NON-NLS-1$ //$NON-NLS-2$
+]]>
+</codefragment>
+</duplication>
+<duplication lines="12" tokens="0">
+<file line="25" path="/home/diego/ufmg/workspace/PasswordSafeLib/test/org/pwsafe/util/PasswordPolicyTest.java"/>
+<file line="17" path="/home/diego/ufmg/workspace/PasswordSafeLib/test/org/pwsafe/util/PasswordPolicyTest.java"/>
+<codefragment>
+<![CDATA[
+		assertFalse(pol.digitChars);
+		assertFalse(pol.lowercaseChars);
+		assertFalse(pol.uppercaseChars);
+		assertFalse(pol.symbolChars);
+		assertFalse(pol.easyview);
+		assertEquals(0, pol.length);
+		pol = PassphrasePolicy.valueOf("0800008FFF000FFF000");
+		assertFalse(pol.digitChars);
+		assertFalse(pol.lowercaseChars);
+		assertFalse(pol.uppercaseChars);
+		assertFalse(pol.symbolChars);
+		assertFalse(pol.easyview);
+]]>
+</codefragment>
+</duplication>
+<duplication lines="11" tokens="0">
+<file line="105" path="/home/diego/ufmg/workspace/PasswordSafeLib/src/org/pwsafe/lib/file/PwsIntegerField.java"/>
+<file line="85" path="/home/diego/ufmg/workspace/PasswordSafeLib/src/org/pwsafe/lib/file/PwsStringField.java"/>
+<codefragment>
+<![CDATA[
+	@Override
+	public boolean equals( Object arg0 )
+	{
+		if ( arg0 instanceof PwsIntegerField )
+		{
+			return equals( (PwsIntegerField) arg0 );
+		}
+		else if ( arg0 instanceof Integer )
+		{
+			return equals( (Integer) arg0 );
+		}
+		throw new ClassCastException();
+	public boolean equals( PwsIntegerField arg0 )
+	{
+		return ((Integer) getValue()).equals(arg0.getValue());
+	public boolean equals( Integer arg0 )
+	{
+		return ((Integer) getValue()).equals(arg0);
+]]>
+</codefragment>
+</duplication>
+<duplication lines="11" tokens="0">
+<file line="105" path="/home/diego/ufmg/workspace/PasswordSafeLib/src/org/pwsafe/lib/file/PwsIntegerField.java"/>
+<file line="121" path="/home/diego/ufmg/workspace/PasswordSafeLib/src/org/pwsafe/lib/file/PwsStringUnicodeField.java"/>
+<codefragment>
+<![CDATA[
+	@Override
+	public boolean equals( Object arg0 )
+	{
+		if ( arg0 instanceof PwsIntegerField )
+		{
+			return equals( (PwsIntegerField) arg0 );
+		}
+		else if ( arg0 instanceof Integer )
+		{
+			return equals( (Integer) arg0 );
+		}
+		throw new ClassCastException();
+	public boolean equals( PwsIntegerField arg0 )
+	{
+		return ((Integer) getValue()).equals(arg0.getValue());
+	public boolean equals( Integer arg0 )
+	{
+		return ((Integer) getValue()).equals(arg0);
+]]>
+</codefragment>
+</duplication>
+<duplication lines="11" tokens="0">
+<file line="294" path="/home/diego/ufmg/workspace/PasswordSafeSWT/src/org/pwsafe/passwordsafeswt/dialog/EditDialog.java"/>
+<file line="311" path="/home/diego/ufmg/workspace/PasswordSafeSWT/src/org/pwsafe/passwordsafeswt/dialog/EditDialog.java"/>
+<codefragment>
+<![CDATA[
+		formDataTemp.top = new FormAttachment(txtNotes, 10, SWT.BOTTOM);
+		formDataTemp.left = new FormAttachment(lblNotes, 0, SWT.LEFT);
+		lblUrl.setLayoutData(formDataTemp);
+		lblUrl.setText(Messages.getString("EditDialog.Url")); //$NON-NLS-1$
+		txtUrl = new Text(compositeFields, SWT.BORDER);
+		formDataTemp = new FormData();
+		formDataTemp.top = new FormAttachment(txtNotes, 10, SWT.BOTTOM);
+		formDataTemp.left = new FormAttachment(txtNotes, 0, SWT.LEFT);
+		formDataTemp.right = new FormAttachment(txtNotes, 0 , SWT.RIGHT);
+		txtUrl.setLayoutData(formDataTemp);
+		txtUrl.addKeyListener(dirtyKeypress);
+]]>
+</codefragment>
+</duplication>
+<duplication lines="11" tokens="0">
+<file line="107" path="/home/diego/ufmg/workspace/PasswordSafeLib/src/org/pwsafe/lib/file/PwsFileHeaderV3.java"/>
+<file line="82" path="/home/diego/ufmg/workspace/PasswordSafeLib/src/org/pwsafe/lib/file/PwsFileHeaderV3.java"/>
+<codefragment>
+<![CDATA[
+		stream.read( tag );
+		stream.read( salt );
+		byte[] iterBytes = new byte[4];
+		stream.read( iterBytes );
+		iter = Util.getIntFromByteArray(iterBytes, 0);
+		stream.read( password );
+		stream.read( b1 );
+		stream.read( b2 );
+		stream.read( b3 );
+		stream.read( b4 );
+		stream.read( IV );
+]]>
+</codefragment>
+</duplication>
+<duplication lines="12" tokens="0">
+<file line="141" path="/home/diego/ufmg/workspace/PasswordSafeSWT/src/org/pwsafe/passwordsafeswt/preference/WidgetPreferences.java"/>
+<file line="102" path="/home/diego/ufmg/workspace/PasswordSafeSWT/src/org/pwsafe/passwordsafeswt/preference/WidgetPreferences.java"/>
+<codefragment>
+<![CDATA[
+    public static void tuneTreeColumn(final TreeColumn column, final String id)
+    {
+        final Rectangle rectangle = PreferenceConverter.getRectangle(ps, id);
+        if (rectangle.width > 0)
+        {
+            column.setWidth(rectangle.width);
+        }
+
+
+        column.addDisposeListener(new DisposeListener()
+        {
+            public void widgetDisposed(DisposeEvent e)
+            {
+                log.debug("saving widget size, id=" + id);
+                PreferenceConverter.setValue(ps, id, new Rectangle(0, 0, column.getWidth(), 0));
+    public static void tuneTreeColumn(final TreeColumn column, Class clazz, final String id)
+    {
+        tuneTreeColumn(column, clazz.getName() + "/" + id);
+]]>
+</codefragment>
+</duplication>
+<duplication lines="10" tokens="2">
+<file line="13" path="/home/diego/ufmg/workspace/PasswordSafeSWT/src/org/pwsafe/passwordsafeswt/dialog/Messages.java"/>
+<file line="13" path="/home/diego/ufmg/workspace/PasswordSafeSWT/src/org/pwsafe/passwordsafeswt/action/Messages.java"/>
+<codefragment>
+<![CDATA[
+public class Messages {
+	private static final String BUNDLE_NAME = "org.pwsafe.passwordsafeswt.dialog.messages"; //$NON-NLS-1$
+
+
+	private static final ResourceBundle RESOURCE_BUNDLE = ResourceBundle
+			.getBundle(BUNDLE_NAME);
+
+
+	private Messages() {
+	}
+
+
+	public static String getString(String key) {
+		try {
+			return RESOURCE_BUNDLE.getString(key);
+		} catch (MissingResourceException e) {
+			return '!' + key + '!';
+]]>
+</codefragment>
+</duplication>
+<duplication lines="10" tokens="2">
+<file line="13" path="/home/diego/ufmg/workspace/PasswordSafeSWT/src/org/pwsafe/passwordsafeswt/dialog/Messages.java"/>
+<file line="6" path="/home/diego/ufmg/workspace/PasswordSafeSWT/src/org/pwsafe/passwordsafeswt/preference/Messages.java"/>
+<codefragment>
+<![CDATA[
+public class Messages {
+	private static final String BUNDLE_NAME = "org.pwsafe.passwordsafeswt.dialog.messages"; //$NON-NLS-1$
+
+
+	private static final ResourceBundle RESOURCE_BUNDLE = ResourceBundle
+			.getBundle(BUNDLE_NAME);
+
+
+	private Messages() {
+	}
+
+
+	public static String getString(String key) {
+		try {
+			return RESOURCE_BUNDLE.getString(key);
+		} catch (MissingResourceException e) {
+			return '!' + key + '!';
+]]>
+</codefragment>
+</duplication>
+<duplication lines="10" tokens="2">
+<file line="13" path="/home/diego/ufmg/workspace/PasswordSafeSWT/src/org/pwsafe/passwordsafeswt/dialog/Messages.java"/>
+<file line="13" path="/home/diego/ufmg/workspace/PasswordSafeSWT/src/org/pwsafe/passwordsafeswt/Messages.java"/>
+<codefragment>
+<![CDATA[
+public class Messages {
+	private static final String BUNDLE_NAME = "org.pwsafe.passwordsafeswt.dialog.messages"; //$NON-NLS-1$
+
+
+	private static final ResourceBundle RESOURCE_BUNDLE = ResourceBundle
+			.getBundle(BUNDLE_NAME);
+
+
+	private Messages() {
+	}
+
+
+	public static String getString(String key) {
+		try {
+			return RESOURCE_BUNDLE.getString(key);
+		} catch (MissingResourceException e) {
+			return '!' + key + '!';
+]]>
+</codefragment>
+</duplication>
+<duplication lines="10" tokens="2">
+<file line="13" path="/home/diego/ufmg/workspace/PasswordSafeSWT/src/org/pwsafe/passwordsafeswt/action/Messages.java"/>
+<file line="6" path="/home/diego/ufmg/workspace/PasswordSafeSWT/src/org/pwsafe/passwordsafeswt/preference/Messages.java"/>
+<codefragment>
+<![CDATA[
+public class Messages {
+	private static final String BUNDLE_NAME = "org.pwsafe.passwordsafeswt.action.messages"; //$NON-NLS-1$
+
+
+	private static final ResourceBundle RESOURCE_BUNDLE = ResourceBundle
+			.getBundle(BUNDLE_NAME);
+
+
+	private Messages() {
+	}
+
+
+	public static String getString(String key) {
+		try {
+			return RESOURCE_BUNDLE.getString(key);
+		} catch (MissingResourceException e) {
+			return '!' + key + '!';
+]]>
+</codefragment>
+</duplication>
+<duplication lines="10" tokens="2">
+<file line="13" path="/home/diego/ufmg/workspace/PasswordSafeSWT/src/org/pwsafe/passwordsafeswt/action/Messages.java"/>
+<file line="13" path="/home/diego/ufmg/workspace/PasswordSafeSWT/src/org/pwsafe/passwordsafeswt/Messages.java"/>
+<codefragment>
+<![CDATA[
+public class Messages {
+	private static final String BUNDLE_NAME = "org.pwsafe.passwordsafeswt.action.messages"; //$NON-NLS-1$
+
+
+	private static final ResourceBundle RESOURCE_BUNDLE = ResourceBundle
+			.getBundle(BUNDLE_NAME);
+
+
+	private Messages() {
+	}
+
+
+	public static String getString(String key) {
+		try {
+			return RESOURCE_BUNDLE.getString(key);
+		} catch (MissingResourceException e) {
+			return '!' + key + '!';
+]]>
+</codefragment>
+</duplication>
+<duplication lines="10" tokens="2">
+<file line="6" path="/home/diego/ufmg/workspace/PasswordSafeSWT/src/org/pwsafe/passwordsafeswt/preference/Messages.java"/>
+<file line="13" path="/home/diego/ufmg/workspace/PasswordSafeSWT/src/org/pwsafe/passwordsafeswt/Messages.java"/>
+<codefragment>
+<![CDATA[
+public class Messages {
+	private static final String BUNDLE_NAME = "org.pwsafe.passwordsafeswt.preference.messages"; //$NON-NLS-1$
+
+
+	private static final ResourceBundle RESOURCE_BUNDLE = ResourceBundle
+			.getBundle(BUNDLE_NAME);
+
+
+	private Messages() {
+	}
+
+
+	public static String getString(String key) {
+		try {
+			return RESOURCE_BUNDLE.getString(key);
+		} catch (MissingResourceException e) {
+			return '!' + key + '!';
+]]>
+</codefragment>
+</duplication>
+<duplication lines="10" tokens="0">
+<file line="573" path="/home/diego/ufmg/workspace/PasswordSafeLib/src/org/pwsafe/lib/datastore/PwsEntryBean.java"/>
+<file line="533" path="/home/diego/ufmg/workspace/PasswordSafeLib/src/org/pwsafe/lib/datastore/PwsEntryBean.java"/>
+<codefragment>
+<![CDATA[
+            String groupName = getSafeValue(v2, PwsFieldTypeV2.GROUP);
+            newEntry.setGroup(groupName);
+            String title = getSafeValue(v2,PwsFieldTypeV2.TITLE);
+            newEntry.setTitle(title);
+            String user = getSafeValue(v2, PwsFieldTypeV2.USERNAME);
+            newEntry.setUsername(user);
+            String password = getSafeValue(v2,PwsFieldTypeV2.PASSWORD);
+            newEntry.setPassword(new StringBuilder(password));
+            String notes = getSafeValue(v2,PwsFieldTypeV2.NOTES);
+            newEntry.setNotes(notes);
+]]>
+</codefragment>
+</duplication>
+<duplication lines="10" tokens="0">
+<file line="573" path="/home/diego/ufmg/workspace/PasswordSafeLib/src/org/pwsafe/lib/datastore/PwsEntryBean.java"/>
+<file line="271" path="/home/diego/ufmg/workspace/PasswordSafeSWT/src/org/pwsafe/passwordsafeswt/dto/PwsEntryDTO.java"/>
+<codefragment>
+<![CDATA[
+            String groupName = getSafeValue(v2, PwsFieldTypeV2.GROUP);
+            newEntry.setGroup(groupName);
+            String title = getSafeValue(v2,PwsFieldTypeV2.TITLE);
+            newEntry.setTitle(title);
+            String user = getSafeValue(v2, PwsFieldTypeV2.USERNAME);
+            newEntry.setUsername(user);
+            String password = getSafeValue(v2,PwsFieldTypeV2.PASSWORD);
+            newEntry.setPassword(new StringBuilder(password));
+            String notes = getSafeValue(v2,PwsFieldTypeV2.NOTES);
+            newEntry.setNotes(notes);
+]]>
+</codefragment>
+</duplication>
+<duplication lines="10" tokens="0">
+<file line="311" path="/home/diego/ufmg/workspace/PasswordSafeSWT/src/org/pwsafe/passwordsafeswt/dto/PwsEntryDTO.java"/>
+<file line="533" path="/home/diego/ufmg/workspace/PasswordSafeLib/src/org/pwsafe/lib/datastore/PwsEntryBean.java"/>
+<codefragment>
+<![CDATA[
+            String groupName = getSafeValue(v2, PwsRecordV2.GROUP);
+            newEntry.setGroup(groupName);
+            String title = getSafeValue(v2,PwsRecordV2.TITLE);
+            newEntry.setTitle(title);
+            String user = getSafeValue(v2, PwsRecordV2.USERNAME);
+            newEntry.setUsername(user);
+            String password = getSafeValue(v2,PwsRecordV2.PASSWORD);
+            newEntry.setPassword(password);
+            String notes = getSafeValue(v2,PwsRecordV2.NOTES);
+            newEntry.setNotes(notes);
+]]>
+</codefragment>
+</duplication>
+<duplication lines="10" tokens="0">
+<file line="311" path="/home/diego/ufmg/workspace/PasswordSafeSWT/src/org/pwsafe/passwordsafeswt/dto/PwsEntryDTO.java"/>
+<file line="271" path="/home/diego/ufmg/workspace/PasswordSafeSWT/src/org/pwsafe/passwordsafeswt/dto/PwsEntryDTO.java"/>
+<codefragment>
+<![CDATA[
+            String groupName = getSafeValue(v2, PwsRecordV2.GROUP);
+            newEntry.setGroup(groupName);
+            String title = getSafeValue(v2,PwsRecordV2.TITLE);
+            newEntry.setTitle(title);
+            String user = getSafeValue(v2, PwsRecordV2.USERNAME);
+            newEntry.setUsername(user);
+            String password = getSafeValue(v2,PwsRecordV2.PASSWORD);
+            newEntry.setPassword(password);
+            String notes = getSafeValue(v2,PwsRecordV2.NOTES);
+            newEntry.setNotes(notes);
+]]>
+</codefragment>
+</duplication>
+<duplication lines="10" tokens="0">
+<file line="345" path="/home/diego/ufmg/workspace/PasswordSafeLib/src/org/pwsafe/lib/datastore/PwsEntryBean.java"/>
+<file line="360" path="/home/diego/ufmg/workspace/PasswordSafeLib/src/org/pwsafe/lib/datastore/PwsEntryBean.java"/>
+<codefragment>
+<![CDATA[
+		if (created == null) {
+			if (other.created != null)
+				return false;
+		} else if (!created.equals(other.created))
+			return false;
+		if (expires == null) {
+			if (other.expires != null)
+				return false;
+		} else if (!expires.equals(other.expires))
+			return false;
+]]>
+</codefragment>
+</duplication>
+<duplication lines="10" tokens="0">
+<file line="355" path="/home/diego/ufmg/workspace/PasswordSafeLib/src/org/pwsafe/lib/datastore/PwsEntryBean.java"/>
+<file line="88" path="/home/diego/ufmg/workspace/PasswordSafeSWT/src/org/pwsafe/passwordsafeswt/model/PasswordTreeContentProvider.java"/>
+<codefragment>
+<![CDATA[
+		if (lastChange == null) {
+			if (other.lastChange != null)
+				return false;
+		} else if (!lastChange.equals(other.lastChange))
+			return false;
+		if (lastPwChange == null) {
+			if (other.lastPwChange != null)
+				return false;
+		} else if (!lastPwChange.equals(other.lastPwChange))
+			return false;
+]]>
+</codefragment>
+</duplication>
+<duplication lines="10" tokens="0">
+<file line="350" path="/home/diego/ufmg/workspace/PasswordSafeLib/src/org/pwsafe/lib/datastore/PwsEntryBean.java"/>
+<file line="88" path="/home/diego/ufmg/workspace/PasswordSafeSWT/src/org/pwsafe/passwordsafeswt/model/PasswordTreeContentProvider.java"/>
+<codefragment>
+<![CDATA[
+		if (expires == null) {
+			if (other.expires != null)
+				return false;
+		} else if (!expires.equals(other.expires))
+			return false;
+		if (lastChange == null) {
+			if (other.lastChange != null)
+				return false;
+		} else if (!lastChange.equals(other.lastChange))
+			return false;
+]]>
+</codefragment>
+</duplication>
+<duplication lines="10" tokens="0">
+<file line="345" path="/home/diego/ufmg/workspace/PasswordSafeLib/src/org/pwsafe/lib/datastore/PwsEntryBean.java"/>
+<file line="88" path="/home/diego/ufmg/workspace/PasswordSafeSWT/src/org/pwsafe/passwordsafeswt/model/PasswordTreeContentProvider.java"/>
+<codefragment>
+<![CDATA[
+		if (created == null) {
+			if (other.created != null)
+				return false;
+		} else if (!created.equals(other.created))
+			return false;
+		if (expires == null) {
+			if (other.expires != null)
+				return false;
+		} else if (!expires.equals(other.expires))
+			return false;
+]]>
+</codefragment>
+</duplication>
+<duplication lines="10" tokens="0">
+<file line="340" path="/home/diego/ufmg/workspace/PasswordSafeLib/src/org/pwsafe/lib/datastore/PwsEntryBean.java"/>
+<file line="88" path="/home/diego/ufmg/workspace/PasswordSafeSWT/src/org/pwsafe/passwordsafeswt/model/PasswordTreeContentProvider.java"/>
+<codefragment>
+<![CDATA[
+		if (autotype == null) {
+			if (other.autotype != null)
+				return false;
+		} else if (!autotype.equals(other.autotype))
+			return false;
+		if (created == null) {
+			if (other.created != null)
+				return false;
+		} else if (!created.equals(other.created))
+			return false;
+]]>
+</codefragment>
+</duplication>
+<duplication lines="10" tokens="0">
+<file line="335" path="/home/diego/ufmg/workspace/PasswordSafeLib/src/org/pwsafe/lib/datastore/PwsEntryBean.java"/>
+<file line="88" path="/home/diego/ufmg/workspace/PasswordSafeSWT/src/org/pwsafe/passwordsafeswt/model/PasswordTreeContentProvider.java"/>
+<codefragment>
+<![CDATA[
+		if (version == null) {
+			if (other.version != null)
+				return false;
+		} else if (!version.equals(other.version))
+			return false;
+		if (autotype == null) {
+			if (other.autotype != null)
+				return false;
+		} else if (!autotype.equals(other.autotype))
+			return false;
+]]>
+</codefragment>
+</duplication>
+<duplication lines="10" tokens="0">
+<file line="330" path="/home/diego/ufmg/workspace/PasswordSafeLib/src/org/pwsafe/lib/datastore/PwsEntryBean.java"/>
+<file line="88" path="/home/diego/ufmg/workspace/PasswordSafeSWT/src/org/pwsafe/passwordsafeswt/model/PasswordTreeContentProvider.java"/>
+<codefragment>
+<![CDATA[
+		if (username == null) {
+			if (other.username != null)
+				return false;
+		} else if (!username.equals(other.username))
+			return false;
+		if (version == null) {
+			if (other.version != null)
+				return false;
+		} else if (!version.equals(other.version))
+			return false;
+]]>
+</codefragment>
+</duplication>
+<duplication lines="10" tokens="0">
+<file line="325" path="/home/diego/ufmg/workspace/PasswordSafeLib/src/org/pwsafe/lib/datastore/PwsEntryBean.java"/>
+<file line="88" path="/home/diego/ufmg/workspace/PasswordSafeSWT/src/org/pwsafe/passwordsafeswt/model/PasswordTreeContentProvider.java"/>
+<codefragment>
+<![CDATA[
+		if (title == null) {
+			if (other.title != null)
+				return false;
+		} else if (!title.equals(other.title))
+			return false;
+		if (username == null) {
+			if (other.username != null)
+				return false;
+		} else if (!username.equals(other.username))
+			return false;
+]]>
+</codefragment>
+</duplication>
+<duplication lines="10" tokens="0">
+<file line="320" path="/home/diego/ufmg/workspace/PasswordSafeLib/src/org/pwsafe/lib/datastore/PwsEntryBean.java"/>
+<file line="88" path="/home/diego/ufmg/workspace/PasswordSafeSWT/src/org/pwsafe/passwordsafeswt/model/PasswordTreeContentProvider.java"/>
+<codefragment>
+<![CDATA[
+		if (group == null) {
+			if (other.group != null)
+				return false;
+		} else if (!group.equals(other.group))
+			return false;
+		if (title == null) {
+			if (other.title != null)
+				return false;
+		} else if (!title.equals(other.title))
+			return false;
+]]>
+</codefragment>
+</duplication>
+<duplication lines="10" tokens="0">
+<file line="315" path="/home/diego/ufmg/workspace/PasswordSafeLib/src/org/pwsafe/lib/datastore/PwsEntryBean.java"/>
+<file line="88" path="/home/diego/ufmg/workspace/PasswordSafeSWT/src/org/pwsafe/passwordsafeswt/model/PasswordTreeContentProvider.java"/>
+<codefragment>
+<![CDATA[
+		if (id == null) {
+			if (other.id != null)
+				return false;
+		} else if (!id.equals(other.id))
+			return false;
+		if (group == null) {
+			if (other.group != null)
+				return false;
+		} else if (!group.equals(other.group))
+			return false;
+]]>
+</codefragment>
+</duplication>
+<duplication lines="10" tokens="0">
+<file line="315" path="/home/diego/ufmg/workspace/PasswordSafeLib/src/org/pwsafe/lib/datastore/PwsEntryBean.java"/>
+<file line="360" path="/home/diego/ufmg/workspace/PasswordSafeLib/src/org/pwsafe/lib/datastore/PwsEntryBean.java"/>
+<codefragment>
+<![CDATA[
+		if (id == null) {
+			if (other.id != null)
+				return false;
+		} else if (!id.equals(other.id))
+			return false;
+		if (group == null) {
+			if (other.group != null)
+				return false;
+		} else if (!group.equals(other.group))
+			return false;
+]]>
+</codefragment>
+</duplication>
+<duplication lines="10" tokens="0">
+<file line="88" path="/home/diego/ufmg/workspace/PasswordSafeSWT/src/org/pwsafe/passwordsafeswt/model/PasswordTreeContentProvider.java"/>
+<file line="360" path="/home/diego/ufmg/workspace/PasswordSafeLib/src/org/pwsafe/lib/datastore/PwsEntryBean.java"/>
+<codefragment>
+<![CDATA[
+            if (name == null) {
+                if (other.name != null) {
+                    return false;
+                }
+            } else if (!name.equals(other.name)) {
+                return false;
+            if (parent == null) {
+                if (other.parent != null) {
+                    return false;
+                }
+            } else if (!parent.equals(other.parent)) {
+                return false;
+]]>
+</codefragment>
+</duplication>
+</pmd-cpd>

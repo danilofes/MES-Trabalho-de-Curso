@@ -1,0 +1,375 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pmd-cpd>
+	<duplication lines="21" tokens="129">
+		<file line="43"
+			path="/home/danilo/temp/task-unifier-src/com/leclercb/commons/api/utils/properties/RemoveProperties.java" />
+		<file line="52"
+			path="/home/danilo/temp/task-unifier-src/com/leclercb/commons/api/utils/properties/ReplaceProperties.java" />
+		<codefragment> String keyStartsWith = args[1]; if (!file.exists() ||
+			!file.isFile()) throw new IllegalArgumentException(); final String
+			bundle = file.getName().substring( 0, (file.getName().indexOf('_') ==
+			-1 ? file.getName().indexOf('.') : file.getName().indexOf( '_')));
+			File[] files = file.getParentFile().listFiles(new FileFilter() {
+			@Override public boolean accept(File file) { return
+			file.getName().startsWith(bundle); } }); for (File f : files) {
+			removeProperty(f, keyStartsWith);</codefragment>
+	</duplication>
+	<duplication lines="18" tokens="123">
+		<file line="45"
+			path="/home/danilo/temp/task-unifier-src/com/leclercb/commons/api/utils/properties/RemoveProperties.java" />
+		<file line="47"
+			path="/home/danilo/temp/task-unifier-src/com/leclercb/commons/api/utils/properties/AddProperties.java" />
+		<file line="54"
+			path="/home/danilo/temp/task-unifier-src/com/leclercb/commons/api/utils/properties/ReplaceProperties.java" />
+		<codefragment> if (!file.exists() || !file.isFile()) throw new
+			IllegalArgumentException(); final String bundle =
+			file.getName().substring( 0, (file.getName().indexOf('_') == -1 ?
+			file.getName().indexOf('.') : file.getName().indexOf( '_'))); File[]
+			files = file.getParentFile().listFiles(new FileFilter() { @Override
+			public boolean accept(File file) { return
+			file.getName().startsWith(bundle); } }); for (File f : files) {
+		</codefragment>
+	</duplication>
+	<duplication lines="20" tokens="106">
+		<file line="82"
+			path="/home/danilo/temp/task-unifier-src/com/leclercb/commons/api/coder/AbstractFactoryXMLCoder.java" />
+		<file line="64"
+			path="/home/danilo/temp/task-unifier-src/com/leclercb/commons/api/coder/AbstractXMLCoder.java" />
+		<codefragment> public void decode(InputStream input) throws
+			FactoryCoderException { CheckUtils.isNotNull(input); try {
+			DocumentBuilderFactory factory =
+			DocumentBuilderFactory.newInstance();
+			factory.setIgnoringComments(true); DocumentBuilder builder =
+			factory.newDocumentBuilder(); Document document =
+			builder.parse(input); document.getDocumentElement().normalize(); if
+			(!document.getChildNodes().item(0).getNodeName().equals(
+			this.rootName)) throw new Exception("Root name must be \"" +
+			this.rootName + "\""); Node root = document.getChildNodes().item(0);
+		</codefragment>
+	</duplication>
+	<duplication lines="30" tokens="102">
+		<file line="125"
+			path="/home/danilo/temp/task-unifier-src/com/leclercb/commons/api/coder/AbstractFactoryXMLCoder.java" />
+		<file line="104"
+			path="/home/danilo/temp/task-unifier-src/com/leclercb/commons/api/coder/AbstractXMLCoder.java" />
+		<codefragment> this.encode(document, root); DOMSource domSource = new
+			DOMSource(document); TransformerFactory tf =
+			TransformerFactory.newInstance(); Transformer transformer =
+			tf.newTransformer(); transformer.setOutputProperty(OutputKeys.METHOD,
+			"xml"); transformer.setOutputProperty(OutputKeys.ENCODING, "UTF-8");
+			transformer.setOutputProperty(
+			"{http://xml.apache.org/xslt}indent-amount", "4");
+			transformer.setOutputProperty(OutputKeys.INDENT, "yes"); StreamResult
+			sr = new StreamResult(output); transformer.transform(domSource, sr);
+			} catch (Exception e) { throw new
+			FactoryCoderException(e.getMessage(), e); } } /** * Decodes a factory
+			from the root node. All the decoded objects will be * created (and
+			inserted) by the factory. * * @param root * root node * @throws
+			FactoryCoderException * if an error occurs during decoding */
+			protected abstract void decode(Node root) throws
+			FactoryCoderException;</codefragment>
+	</duplication>
+	<duplication lines="13" tokens="78">
+		<file line="18"
+			path="/home/danilo/temp/task-unifier-src/com/leclercb/commons/api/utils/properties/RemoveProperties.java" />
+		<file line="21"
+			path="/home/danilo/temp/task-unifier-src/com/leclercb/commons/api/utils/properties/ReplaceProperties.java" />
+		<codefragment> public static void removeProperty(File file, String
+			keyStartsWith) throws Exception { SortedProperties p = new
+			SortedProperties(); p.load(new InputStreamReader(new
+			FileInputStream(file), "UTF-8")); Set&lt;Object&gt; keys = new
+			HashSet&lt;Object&gt;(p.keySet()); for (Object key : keys) { if
+			(!key.toString().startsWith(keyStartsWith)) continue;
+			System.out.println("Property \"" + key + "\" removed from: "
+		</codefragment>
+	</duplication>
+	<duplication lines="20" tokens="71">
+		<file line="24"
+			path="/home/danilo/temp/task-unifier-src/com/leclercb/commons/api/event/action/WeakActionListener.java" />
+		<file line="24"
+			path="/home/danilo/temp/task-unifier-src/com/leclercb/commons/api/event/listchange/WeakListChangeListener.java" />
+		<file line="26"
+			path="/home/danilo/temp/task-unifier-src/com/leclercb/commons/api/event/propertychange/WeakPropertyChangeListener.java" />
+		<codefragment> listener.actionPerformed(evt); } @Override public
+			boolean equals(Object obj) { if (this.reference != null) return
+			this.reference.equals(obj); return super.equals(obj); } @Override
+			public int hashCode() { if (this.reference != null) return
+			this.reference.hashCode(); return super.hashCode(); } }
+		</codefragment>
+	</duplication>
+	<duplication lines="20" tokens="71">
+		<file line="27"
+			path="/home/danilo/temp/task-unifier-src/com/leclercb/commons/api/glazedlists/WeakListEventListener.java" />
+		<file line="60"
+			path="/home/danilo/temp/task-unifier-src/com/leclercb/commons/api/properties/events/WeakUndoableEditListener.java" />
+		<file line="55"
+			path="/home/danilo/temp/task-unifier-src/com/leclercb/commons/gui/swing/undo/events/WeakRedoListener.java" />
+		<file line="55"
+			path="/home/danilo/temp/task-unifier-src/com/leclercb/commons/gui/swing/undo/events/WeakUndoListener.java" />
+		<file line="57"
+			path="/home/danilo/temp/task-unifier-src/com/leclercb/commons/gui/swing/undo/events/WeakDiscardAllEditsListener.java" />
+		<codefragment> listener.listChanged(event); } @Override public boolean
+			equals(Object obj) { if (this.reference != null) return
+			this.reference.equals(obj); return super.equals(obj); } @Override
+			public int hashCode() { if (this.reference != null) return
+			this.reference.hashCode(); return super.hashCode(); } }
+		</codefragment>
+	</duplication>
+	<duplication lines="20" tokens="70">
+		<file line="56"
+			path="/home/danilo/temp/task-unifier-src/com/leclercb/commons/api/properties/events/WeakSavePropertiesListener.java" />
+		<file line="56"
+			path="/home/danilo/temp/task-unifier-src/com/leclercb/commons/api/properties/events/WeakReloadPropertiesListener.java" />
+		<codefragment> listener.saveProperties(); } @Override public boolean
+			equals(Object obj) { if (this.reference != null) return
+			this.reference.equals(obj); return super.equals(obj); } @Override
+			public int hashCode() { if (this.reference != null) return
+			this.reference.hashCode(); return super.hashCode(); } }
+		</codefragment>
+	</duplication>
+	<duplication lines="20" tokens="69">
+		<file line="24"
+			path="/home/danilo/temp/task-unifier-src/com/leclercb/commons/api/event/action/WeakActionListener.java" />
+		<file line="24"
+			path="/home/danilo/temp/task-unifier-src/com/leclercb/commons/api/event/listchange/WeakListChangeListener.java" />
+		<file line="26"
+			path="/home/danilo/temp/task-unifier-src/com/leclercb/commons/api/event/propertychange/WeakPropertyChangeListener.java" />
+		<file line="27"
+			path="/home/danilo/temp/task-unifier-src/com/leclercb/commons/api/glazedlists/WeakListEventListener.java" />
+		<file line="60"
+			path="/home/danilo/temp/task-unifier-src/com/leclercb/commons/api/properties/events/WeakUndoableEditListener.java" />
+		<file line="56"
+			path="/home/danilo/temp/task-unifier-src/com/leclercb/commons/api/properties/events/WeakSavePropertiesListener.java" />
+		<file line="56"
+			path="/home/danilo/temp/task-unifier-src/com/leclercb/commons/api/properties/events/WeakReloadPropertiesListener.java" />
+		<file line="55"
+			path="/home/danilo/temp/task-unifier-src/com/leclercb/commons/gui/swing/undo/events/WeakRedoListener.java" />
+		<file line="55"
+			path="/home/danilo/temp/task-unifier-src/com/leclercb/commons/gui/swing/undo/events/WeakUndoListener.java" />
+		<file line="57"
+			path="/home/danilo/temp/task-unifier-src/com/leclercb/commons/gui/swing/undo/events/WeakDiscardAllEditsListener.java" />
+		<codefragment> listener.actionPerformed(evt); } @Override public
+			boolean equals(Object obj) { if (this.reference != null) return
+			this.reference.equals(obj); return super.equals(obj); } @Override
+			public int hashCode() { if (this.reference != null) return
+			this.reference.hashCode(); return super.hashCode(); } }
+		</codefragment>
+	</duplication>
+	<duplication lines="11" tokens="67">
+		<file line="115"
+			path="/home/danilo/temp/task-unifier-src/com/leclercb/commons/api/coder/AbstractFactoryXMLCoder.java" />
+		<file line="93"
+			path="/home/danilo/temp/task-unifier-src/com/leclercb/commons/api/coder/AbstractXMLCoder.java" />
+		<codefragment> public void encode(OutputStream output) throws
+			FactoryCoderException { try { DocumentBuilderFactory factory =
+			DocumentBuilderFactory.newInstance(); DocumentBuilder builder =
+			factory.newDocumentBuilder(); DOMImplementation implementation =
+			builder.getDOMImplementation(); Document document =
+			implementation.createDocument(null, null, null); Element root =
+			document.createElement(this.rootName); document.appendChild(root);
+			this.encode(document, root);</codefragment>
+	</duplication>
+	<duplication lines="11" tokens="67">
+		<file line="33"
+			path="/home/danilo/temp/task-unifier-src/com/leclercb/commons/api/utils/properties/RemoveProperties.java" />
+		<file line="41"
+			path="/home/danilo/temp/task-unifier-src/com/leclercb/commons/api/utils/properties/ReplaceProperties.java" />
+		<codefragment> p.remove(key); } ByteArrayOutputStream output = new
+			ByteArrayOutputStream(); p.store(output, null);
+			IOUtils.write(output.toString(), new FileOutputStream(file),
+			"UTF-8"); } public static void main(String[] args) throws Exception {
+			File file = new File(args[0]); String keyStartsWith = args[1];
+		</codefragment>
+	</duplication>
+	<duplication lines="15" tokens="63">
+		<file line="48"
+			path="/home/danilo/temp/task-unifier-src/com/leclercb/commons/gui/swing/models/DefaultSortedComboBoxModel.java" />
+		<file line="13"
+			path="/home/danilo/temp/task-unifier-src/com/leclercb/commons/gui/swing/models/AbstractComboBoxModel.java" />
+		<codefragment> this.selectedObject = null; } @Override public Object
+			getSelectedItem() { return this.selectedObject; } @Override public
+			void setSelectedItem(Object anObject) { if
+			(!EqualsUtils.equals(this.selectedObject, anObject)) {
+			this.selectedObject = anObject; this.fireContentsChanged(this, -1,
+			-1); } }</codefragment>
+	</duplication>
+	<duplication lines="9" tokens="42">
+		<file line="480"
+			path="/home/danilo/temp/task-unifier-src/com/leclercb/commons/api/properties/PropertyMap.java" />
+		<file line="673"
+			path="/home/danilo/temp/task-unifier-src/com/leclercb/commons/api/properties/PropertyMap.java" />
+		<codefragment> String value = this.properties.getProperty(key); try {
+			@SuppressWarnings("unchecked") PropertiesCoder&lt;T&gt; coder =
+			(PropertiesCoder&lt;T&gt;) this.coders.get(cls); if (coder == null)
+			throw new PropertiesException("No coder found for class: " + cls);
+		</codefragment>
+	</duplication>
+	<duplication lines="12" tokens="42">
+		<file line="60"
+			path="/home/danilo/temp/task-unifier-src/com/leclercb/commons/gui/swing/undo/UndoFireManager.java" />
+		<file line="44"
+			path="/home/danilo/temp/task-unifier-src/com/leclercb/commons/gui/swing/undo/events/UndoSupport.java" />
+		<codefragment> this.discardAllEditsListenerList = new
+			ListenerList&lt;DiscardAllEditsListener&gt;(); } @Override public
+			void addUndoListener(UndoListener listener) {
+			this.undoListenerList.addListener(listener); } @Override public void
+			removeUndoListener(UndoListener listener) {
+			this.undoListenerList.removeListener(listener); }</codefragment>
+	</duplication>
+	<duplication lines="19" tokens="40">
+		<file line="80"
+			path="/home/danilo/temp/task-unifier-src/com/leclercb/commons/api/progress/ProgressMonitor.java" />
+		<file line="160"
+			path="/home/danilo/temp/task-unifier-src/com/leclercb/commons/api/plugins/PluginLoader.java" />
+		<codefragment> } /** * {@inheritDoc} */ @Override public void
+			addListChangeListener(ListChangeListener listener) {
+			this.listChangeSupport.addListChangeListener(listener); } /** *
+			{@inheritDoc} */ @Override public void
+			removeListChangeListener(ListChangeListener listener) {
+			this.listChangeSupport.removeListChangeListener(listener); } }
+		</codefragment>
+	</duplication>
+	<duplication lines="12" tokens="40">
+		<file line="75"
+			path="/home/danilo/temp/task-unifier-src/com/leclercb/commons/gui/swing/undo/UndoFireManager.java" />
+		<file line="44"
+			path="/home/danilo/temp/task-unifier-src/com/leclercb/commons/gui/swing/undo/events/RedoSupport.java" />
+		<codefragment> listener.undoPerformed(new ActionEvent(this, 0, null));
+			} @Override public void addRedoListener(RedoListener listener) {
+			this.redoListenerList.addListener(listener); } @Override public void
+			removeRedoListener(RedoListener listener) {
+			this.redoListenerList.removeListener(listener); }</codefragment>
+	</duplication>
+	<duplication lines="12" tokens="40">
+		<file line="90"
+			path="/home/danilo/temp/task-unifier-src/com/leclercb/commons/gui/swing/undo/UndoFireManager.java" />
+		<file line="44"
+			path="/home/danilo/temp/task-unifier-src/com/leclercb/commons/gui/swing/undo/events/DiscardAllEditsSupport.java" />
+		<codefragment> listener.redoPerformed(new ActionEvent(this, 0, null));
+			} @Override public void
+			addDiscardAllEditsListener(DiscardAllEditsListener listener) {
+			this.discardAllEditsListenerList.addListener(listener); } @Override
+			public void removeDiscardAllEditsListener(DiscardAllEditsListener
+			listener) {
+			this.discardAllEditsListenerList.removeListener(listener); }
+		</codefragment>
+	</duplication>
+	<duplication lines="14" tokens="40">
+		<file line="57"
+			path="/home/danilo/temp/task-unifier-src/com/leclercb/commons/gui/swing/lookandfeel/types/MetalLookAndFeelDescriptor.java" />
+		<file line="52"
+			path="/home/danilo/temp/task-unifier-src/com/leclercb/commons/gui/swing/lookandfeel/types/DefaultLookAndFeelDescriptor.java" />
+		<codefragment>
+			UIManager.setLookAndFeel(MetalLookAndFeel.class.getName()); if
+			(window != null) { SwingUtilities.updateComponentTreeUI(window);
+			window.pack(); } } catch (Exception e) { throw new
+			LookAndFeelException( "Error while setting look and feel", e); } } }
+		</codefragment>
+	</duplication>
+	<duplication lines="7" tokens="36">
+		<file line="103"
+			path="/home/danilo/temp/task-unifier-src/com/leclercb/commons/api/coder/AbstractFactoryXMLCoder.java" />
+		<file line="85"
+			path="/home/danilo/temp/task-unifier-src/com/leclercb/commons/api/coder/AbstractXMLCoder.java" />
+		<codefragment> this.decode(root); } catch (FactoryCoderException e) {
+			throw e; } catch (Exception e) { throw new
+			FactoryCoderException(e.getMessage(), e); } }</codefragment>
+	</duplication>
+	<duplication lines="8" tokens="35">
+		<file line="169"
+			path="/home/danilo/temp/task-unifier-src/com/leclercb/commons/api/properties/PropertyMap.java" />
+		<file line="200"
+			path="/home/danilo/temp/task-unifier-src/com/leclercb/commons/api/properties/PropertyMap.java" />
+		<file line="286"
+			path="/home/danilo/temp/task-unifier-src/com/leclercb/commons/api/properties/PropertyMap.java" />
+		<file line="350"
+			path="/home/danilo/temp/task-unifier-src/com/leclercb/commons/api/properties/PropertyMap.java" />
+		<file line="381"
+			path="/home/danilo/temp/task-unifier-src/com/leclercb/commons/api/properties/PropertyMap.java" />
+		<file line="448"
+			path="/home/danilo/temp/task-unifier-src/com/leclercb/commons/api/properties/PropertyMap.java" />
+		<file line="514"
+			path="/home/danilo/temp/task-unifier-src/com/leclercb/commons/api/properties/PropertyMap.java" />
+		<codefragment> public Boolean getBooleanProperty(String key) { String
+			value = this.properties.getProperty(key); if (value == null ||
+			value.length() == 0) return null; try { return
+			Boolean.parseBoolean(value);</codefragment>
+	</duplication>
+	<duplication lines="4" tokens="34">
+		<file line="36"
+			path="/home/danilo/temp/task-unifier-src/com/leclercb/commons/api/utils/properties/RemoveProperties.java" />
+		<file line="32"
+			path="/home/danilo/temp/task-unifier-src/com/leclercb/commons/api/utils/properties/AddProperties.java" />
+		<file line="44"
+			path="/home/danilo/temp/task-unifier-src/com/leclercb/commons/api/utils/properties/ReplaceProperties.java" />
+		<codefragment> ByteArrayOutputStream output = new
+			ByteArrayOutputStream(); p.store(output, null);
+			IOUtils.write(output.toString(), new FileOutputStream(file),
+			"UTF-8"); }</codefragment>
+	</duplication>
+	<duplication lines="7" tokens="34">
+		<file line="169"
+			path="/home/danilo/temp/task-unifier-src/com/leclercb/commons/api/properties/PropertyMap.java" />
+		<file line="200"
+			path="/home/danilo/temp/task-unifier-src/com/leclercb/commons/api/properties/PropertyMap.java" />
+		<file line="286"
+			path="/home/danilo/temp/task-unifier-src/com/leclercb/commons/api/properties/PropertyMap.java" />
+		<file line="350"
+			path="/home/danilo/temp/task-unifier-src/com/leclercb/commons/api/properties/PropertyMap.java" />
+		<file line="381"
+			path="/home/danilo/temp/task-unifier-src/com/leclercb/commons/api/properties/PropertyMap.java" />
+		<file line="412"
+			path="/home/danilo/temp/task-unifier-src/com/leclercb/commons/api/properties/PropertyMap.java" />
+		<file line="448"
+			path="/home/danilo/temp/task-unifier-src/com/leclercb/commons/api/properties/PropertyMap.java" />
+		<file line="514"
+			path="/home/danilo/temp/task-unifier-src/com/leclercb/commons/api/properties/PropertyMap.java" />
+		<codefragment> public Boolean getBooleanProperty(String key) { String
+			value = this.properties.getProperty(key); if (value == null ||
+			value.length() == 0) return null; try {</codefragment>
+	</duplication>
+	<duplication lines="6" tokens="32">
+		<file line="70"
+			path="/home/danilo/temp/task-unifier-src/com/leclercb/commons/api/utils/DateUtils.java" />
+		<file line="99"
+			path="/home/danilo/temp/task-unifier-src/com/leclercb/commons/api/utils/DateUtils.java" />
+		<file line="148"
+			path="/home/danilo/temp/task-unifier-src/com/leclercb/commons/api/utils/DateUtils.java" />
+		<codefragment> public static int getDiffInMonths(Calendar c1, Calendar
+			c2) { CheckUtils.isNotNull(c1); CheckUtils.isNotNull(c2); c1 =
+			cloneCalendar(c1); c2 = cloneCalendar(c2);</codefragment>
+	</duplication>
+	<duplication lines="5" tokens="32">
+		<file line="169"
+			path="/home/danilo/temp/task-unifier-src/com/leclercb/commons/api/properties/PropertyMap.java" />
+		<file line="200"
+			path="/home/danilo/temp/task-unifier-src/com/leclercb/commons/api/properties/PropertyMap.java" />
+		<file line="286"
+			path="/home/danilo/temp/task-unifier-src/com/leclercb/commons/api/properties/PropertyMap.java" />
+		<file line="350"
+			path="/home/danilo/temp/task-unifier-src/com/leclercb/commons/api/properties/PropertyMap.java" />
+		<file line="381"
+			path="/home/danilo/temp/task-unifier-src/com/leclercb/commons/api/properties/PropertyMap.java" />
+		<file line="412"
+			path="/home/danilo/temp/task-unifier-src/com/leclercb/commons/api/properties/PropertyMap.java" />
+		<file line="448"
+			path="/home/danilo/temp/task-unifier-src/com/leclercb/commons/api/properties/PropertyMap.java" />
+		<file line="514"
+			path="/home/danilo/temp/task-unifier-src/com/leclercb/commons/api/properties/PropertyMap.java" />
+		<file line="547"
+			path="/home/danilo/temp/task-unifier-src/com/leclercb/commons/api/properties/PropertyMap.java" />
+		<codefragment> public Boolean getBooleanProperty(String key) { String
+			value = this.properties.getProperty(key); if (value == null ||
+			value.length() == 0) return null;</codefragment>
+	</duplication>
+	<duplication lines="4" tokens="30">
+		<file line="48"
+			path="/home/danilo/temp/task-unifier-src/com/leclercb/commons/api/logger/ApiLogger.java" />
+		<file line="48"
+			path="/home/danilo/temp/task-unifier-src/com/leclercb/commons/gui/logger/GuiLogger.java" />
+		<codefragment> LOGGER =
+			Logger.getLogger(ApiLogger.class.getPackage().getName());
+			LOGGER.setLevel(Level.ALL); } catch (SecurityException e) { throw new
+			RuntimeException("Cannot create API logger", e);</codefragment>
+	</duplication>
+</pmd-cpd>

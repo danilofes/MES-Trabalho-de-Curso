@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<simian version="2.3.33">
+    <check failOnDuplication="true" ignoreCharacterCase="true" ignoreCurlyBraces="true" ignoreIdentifierCase="true" ignoreModifiers="true" ignoreStringCase="true" threshold="6">
+        <set lineCount="6">
+            <block sourceFile="/home/diego/ufmg/simian-2.3.33/../workspace/PasswordSafeLib/src/org/pwsafe/lib/file/PwsFileV1V2.java" startLineNumber="164" endLineNumber="172"/>
+            <block sourceFile="/home/diego/ufmg/simian-2.3.33/../workspace/PasswordSafeLib/src/org/pwsafe/lib/file/PwsFileV3.java" startLineNumber="316" endLineNumber="324"/>
+        </set>
+        <set lineCount="6">
+            <block sourceFile="/home/diego/ufmg/simian-2.3.33/../workspace/PasswordSafeSWT/src/org/pwsafe/passwordsafeswt/preference/WidgetPreferences.java" startLineNumber="143" endLineNumber="153"/>
+            <block sourceFile="/home/diego/ufmg/simian-2.3.33/../workspace/PasswordSafeSWT/src/org/pwsafe/passwordsafeswt/preference/WidgetPreferences.java" startLineNumber="104" endLineNumber="114"/>
+        </set>
+        <set lineCount="6">
+            <block sourceFile="/home/diego/ufmg/simian-2.3.33/../workspace/PasswordSafeLib/src/org/pwsafe/lib/file/PwsRecordV2.java" startLineNumber="250" endLineNumber="257"/>
+            <block sourceFile="/home/diego/ufmg/simian-2.3.33/../workspace/PasswordSafeLib/src/org/pwsafe/lib/file/PwsRecordV3.java" startLineNumber="378" endLineNumber="385"/>
+        </set>
+        <set lineCount="6">
+            <block sourceFile="/home/diego/ufmg/simian-2.3.33/../workspace/PasswordSafeSWT/src/org/pwsafe/passwordsafeswt/action/ImportFromXMLAction.java" startLineNumber="31" endLineNumber="37"/>
+            <block sourceFile="/home/diego/ufmg/simian-2.3.33/../workspace/PasswordSafeSWT/src/org/pwsafe/passwordsafeswt/action/ImportFromTextAction.java" startLineNumber="31" endLineNumber="37"/>
+        </set>
+        <set lineCount="6">
+            <block sourceFile="/home/diego/ufmg/simian-2.3.33/../workspace/PasswordSafeSWT/src/org/pwsafe/passwordsafeswt/dialog/PasswordDialog.java" startLineNumber="71" endLineNumber="79"/>
+            <block sourceFile="/home/diego/ufmg/simian-2.3.33/../workspace/PasswordSafeSWT/src/org/pwsafe/passwordsafeswt/dialog/StartupDialog.java" startLineNumber="78" endLineNumber="89"/>
+        </set>
+        <set lineCount="6">
+            <block sourceFile="/home/diego/ufmg/simian-2.3.33/../workspace/PasswordSafeLib/test/org/pwsafe/lib/crypto/BlowfishPwsTest.java" startLineNumber="21" endLineNumber="26"/>
+            <block sourceFile="/home/diego/ufmg/simian-2.3.33/../workspace/PasswordSafeLib/test/org/pwsafe/lib/crypto/TwofishPwsTest.java" startLineNumber="29" endLineNumber="34"/>
+        </set>
+        <set lineCount="6">
+            <block sourceFile="/home/diego/ufmg/simian-2.3.33/../workspace/PasswordSafeLib/src/org/pwsafe/lib/file/CryptoInputStream.java" startLineNumber="85" endLineNumber="90"/>
+            <block sourceFile="/home/diego/ufmg/simian-2.3.33/../workspace/PasswordSafeLib/src/org/pwsafe/lib/file/CryptoInputStream.java" startLineNumber="71" endLineNumber="76"/>
+        </set>
+        <set lineCount="6">
+            <block sourceFile="/home/diego/ufmg/simian-2.3.33/../workspace/PasswordSafeSWT/src/org/pwsafe/passwordsafeswt/action/CopyURLAction.java" startLineNumber="61" endLineNumber="68"/>
+            <block sourceFile="/home/diego/ufmg/simian-2.3.33/../workspace/PasswordSafeSWT/src/org/pwsafe/passwordsafeswt/action/CopyUsernameAction.java" startLineNumber="38" endLineNumber="44"/>
+            <block sourceFile="/home/diego/ufmg/simian-2.3.33/../workspace/PasswordSafeSWT/src/org/pwsafe/passwordsafeswt/action/CopyPasswordAction.java" startLineNumber="38" endLineNumber="44"/>
+        </set>
+        <set lineCount="6">
+            <block sourceFile="/home/diego/ufmg/simian-2.3.33/../workspace/PasswordSafeLib/src/org/pwsafe/lib/file/PwsRecordV2.java" startLineNumber="297" endLineNumber="315"/>
+            <block sourceFile="/home/diego/ufmg/simian-2.3.33/../workspace/PasswordSafeLib/src/org/pwsafe/lib/file/PwsRecordV3.java" startLineNumber="444" endLineNumber="463"/>
+        </set>
+        <set lineCount="6">
+            <block sourceFile="/home/diego/ufmg/simian-2.3.33/../workspace/PasswordSafeLib/src/org/pwsafe/lib/file/PwsFieldTypeV2.java" startLineNumber="37" endLineNumber="47"/>
+            <block sourceFile="/home/diego/ufmg/simian-2.3.33/../workspace/PasswordSafeLib/src/org/pwsafe/lib/file/PwsFieldTypeV1.java" startLineNumber="29" endLineNumber="38"/>
+            <block sourceFile="/home/diego/ufmg/simian-2.3.33/../workspace/PasswordSafeLib/src/org/pwsafe/lib/file/PwsFieldTypeV3.java" startLineNumber="42" endLineNumber="52"/>
+        </set>
+        <set lineCount="6">
+            <block sourceFile="/home/diego/ufmg/simian-2.3.33/../workspace/PasswordSafeSWT/src/org/pwsafe/passwordsafeswt/dialog/DateDialog.java" startLineNumber="57" endLineNumber="62"/>
+            <block sourceFile="/home/diego/ufmg/simian-2.3.33/../workspace/PasswordSafeSWT/src/org/pwsafe/passwordsafeswt/dialog/EditDialog.java" startLineNumber="95" endLineNumber="100"/>
+        </set>
+        <set lineCount="7">
+            <block sourceFile="/home/diego/ufmg/simian-2.3.33/../workspace/PasswordSafeSWT/src/org/pwsafe/passwordsafeswt/SysTray.java" startLineNumber="101" endLineNumber="112"/>
+            <block sourceFile="/home/diego/ufmg/simian-2.3.33/../workspace/PasswordSafeSWT/src/org/pwsafe/passwordsafeswt/SysTray.java" startLineNumber="123" endLineNumber="134"/>
+        </set>
+        <set lineCount="7">
+            <block sourceFile="/home/diego/ufmg/simian-2.3.33/../workspace/PasswordSafeLib/src/org/pwsafe/lib/crypto/MemoryMappedKey.java" startLineNumber="49" endLineNumber="57"/>
+            <block sourceFile="/home/diego/ufmg/simian-2.3.33/../workspace/PasswordSafeLib/src/org/pwsafe/lib/crypto/InMemoryKey.java" startLineNumber="38" endLineNumber="46"/>
+        </set>
+        <set lineCount="7">
+            <block sourceFile="/home/diego/ufmg/simian-2.3.33/../workspace/PasswordSafeSWT/src/org/pwsafe/passwordsafeswt/action/CopyUsernameAction.java" startLineNumber="38" endLineNumber="47"/>
+            <block sourceFile="/home/diego/ufmg/simian-2.3.33/../workspace/PasswordSafeSWT/src/org/pwsafe/passwordsafeswt/action/CopyURLAction.java" startLineNumber="61" endLineNumber="71"/>
+        </set>
+        <set lineCount="7">
+            <block sourceFile="/home/diego/ufmg/simian-2.3.33/../workspace/PasswordSafeSWT/src/org/pwsafe/passwordsafeswt/action/CopyURLAction.java" startLineNumber="39" endLineNumber="66"/>
+            <block sourceFile="/home/diego/ufmg/simian-2.3.33/../workspace/PasswordSafeSWT/src/org/pwsafe/passwordsafeswt/action/OpenUrlAction.java" startLineNumber="39" endLineNumber="53"/>
+        </set>
+        <set lineCount="7">
+            <block sourceFile="/home/diego/ufmg/simian-2.3.33/../workspace/PasswordSafeLib/test/org/pwsafe/lib/datastore/TestSparseRecords.java" startLineNumber="38" endLineNumber="48"/>
+            <block sourceFile="/home/diego/ufmg/simian-2.3.33/../workspace/PasswordSafeLib/test/org/pwsafe/lib/datastore/PwsDataStoreTest.java" startLineNumber="41" endLineNumber="51"/>
+        </set>
+        <set lineCount="7">
+            <block sourceFile="/home/diego/ufmg/simian-2.3.33/../workspace/PasswordSafeLib/src/org/pwsafe/lib/file/CryptoOutputStream.java" startLineNumber="68" endLineNumber="78"/>
+            <block sourceFile="/home/diego/ufmg/simian-2.3.33/../workspace/PasswordSafeLib/src/org/pwsafe/lib/file/CryptoInputStream.java" startLineNumber="104" endLineNumber="114"/>
+        </set>
+        <set lineCount="7">
+            <block sourceFile="/home/diego/ufmg/simian-2.3.33/../workspace/PasswordSafeLib/src/org/pwsafe/lib/file/PwsRecordV3.java" startLineNumber="251" endLineNumber="273"/>
+            <block sourceFile="/home/diego/ufmg/simian-2.3.33/../workspace/PasswordSafeLib/src/org/pwsafe/lib/file/PwsRecordV2.java" startLineNumber="191" endLineNumber="213"/>
+        </set>
+        <set lineCount="7">
+            <block sourceFile="/home/diego/ufmg/simian-2.3.33/../workspace/PasswordSafeLib/src/org/pwsafe/lib/file/PwsFileV1.java" startLineNumber="62" endLineNumber="87"/>
+            <block sourceFile="/home/diego/ufmg/simian-2.3.33/../workspace/PasswordSafeLib/src/org/pwsafe/lib/file/PwsFileV2.java" startLineNumber="64" endLineNumber="89"/>
+        </set>
+        <set lineCount="7">
+            <block sourceFile="/home/diego/ufmg/simian-2.3.33/../workspace/PasswordSafeLib/src/org/pwsafe/lib/file/PwsRecordV3.java" startLineNumber="276" endLineNumber="294"/>
+            <block sourceFile="/home/diego/ufmg/simian-2.3.33/../workspace/PasswordSafeLib/src/org/pwsafe/lib/file/PwsRecordV2.java" startLineNumber="216" endLineNumber="232"/>
+        </set>
+        <set lineCount="8">
+            <block sourceFile="/home/diego/ufmg/simian-2.3.33/../workspace/PasswordSafeSWT/src/org/pwsafe/passwordsafeswt/dialog/Messages.java" startLineNumber="16" endLineNumber="26"/>
+            <block sourceFile="/home/diego/ufmg/simian-2.3.33/../workspace/PasswordSafeSWT/src/org/pwsafe/passwordsafeswt/action/Messages.java" startLineNumber="16" endLineNumber="26"/>
+            <block sourceFile="/home/diego/ufmg/simian-2.3.33/../workspace/PasswordSafeSWT/src/org/pwsafe/passwordsafeswt/preference/Messages.java" startLineNumber="9" endLineNumber="19"/>
+            <block sourceFile="/home/diego/ufmg/simian-2.3.33/../workspace/PasswordSafeSWT/src/org/pwsafe/passwordsafeswt/Messages.java" startLineNumber="16" endLineNumber="26"/>
+        </set>
+        <set lineCount="8">
+            <block sourceFile="/home/diego/ufmg/simian-2.3.33/../workspace/PasswordSafeLib/src/org/pwsafe/lib/file/PwsS3Storage.java" startLineNumber="312" endLineNumber="321"/>
+            <block sourceFile="/home/diego/ufmg/simian-2.3.33/../workspace/PasswordSafeLib/src/org/pwsafe/lib/file/PwsS3Storage.java" startLineNumber="287" endLineNumber="295"/>
+        </set>
+        <set lineCount="8">
+            <block sourceFile="/home/diego/ufmg/simian-2.3.33/../workspace/PasswordSafeLib/src/org/pwsafe/lib/file/PwsFileV1V2.java" startLineNumber="193" endLineNumber="207"/>
+            <block sourceFile="/home/diego/ufmg/simian-2.3.33/../workspace/PasswordSafeLib/src/org/pwsafe/lib/file/PwsFileV3.java" startLineNumber="190" endLineNumber="201"/>
+        </set>
+        <set lineCount="8">
+            <block sourceFile="/home/diego/ufmg/simian-2.3.33/../workspace/PasswordSafeLib/src/org/pwsafe/lib/file/PwsFile.java" startLineNumber="785" endLineNumber="792"/>
+            <block sourceFile="/home/diego/ufmg/simian-2.3.33/../workspace/PasswordSafeLib/src/org/pwsafe/lib/file/PwsFile.java" startLineNumber="410" endLineNumber="417"/>
+            <block sourceFile="/home/diego/ufmg/simian-2.3.33/../workspace/PasswordSafeLib/src/org/pwsafe/lib/file/PwsFileV3.java" startLineNumber="380" endLineNumber="387"/>
+        </set>
+        <set lineCount="8">
+            <block sourceFile="/home/diego/ufmg/simian-2.3.33/../workspace/PasswordSafeLib/test/org/pwsafe/lib/datastore/PwsDataStoreTest.java" startLineNumber="27" endLineNumber="36"/>
+            <block sourceFile="/home/diego/ufmg/simian-2.3.33/../workspace/PasswordSafeLib/test/org/pwsafe/lib/datastore/TestSparseRecords.java" startLineNumber="22" endLineNumber="31"/>
+        </set>
+        <set lineCount="8">
+            <block sourceFile="/home/diego/ufmg/simian-2.3.33/../workspace/PasswordSafeSWT/src/org/pwsafe/passwordsafeswt/action/MRUFileAction.java" startLineNumber="60" endLineNumber="68"/>
+            <block sourceFile="/home/diego/ufmg/simian-2.3.33/../workspace/PasswordSafeSWT/src/org/pwsafe/passwordsafeswt/action/OpenFileAction.java" startLineNumber="45" endLineNumber="53"/>
+        </set>
+        <set lineCount="9">
+            <block sourceFile="/home/diego/ufmg/simian-2.3.33/../workspace/PasswordSafeSWT/src/org/pwsafe/passwordsafeswt/PasswordSafeJFace.java" startLineNumber="497" endLineNumber="507"/>
+            <block sourceFile="/home/diego/ufmg/simian-2.3.33/../workspace/PasswordSafeSWT/src/org/pwsafe/passwordsafeswt/PasswordSafeMacOSX.java" startLineNumber="186" endLineNumber="195"/>
+        </set>
+        <set lineCount="9">
+            <block sourceFile="/home/diego/ufmg/simian-2.3.33/../workspace/PasswordSafeSWT/src/org/pwsafe/passwordsafeswt/dto/PwsEntryDTO.java" startLineNumber="43" endLineNumber="53"/>
+            <block sourceFile="/home/diego/ufmg/simian-2.3.33/../workspace/PasswordSafeLib/src/org/pwsafe/lib/datastore/PwsEntryBean.java" startLineNumber="59" endLineNumber="69"/>
+        </set>
+        <set lineCount="9">
+            <block sourceFile="/home/diego/ufmg/simian-2.3.33/../workspace/PasswordSafeSWT/src/org/pwsafe/passwordsafeswt/dto/PwsEntryDTO.java" startLineNumber="381" endLineNumber="394"/>
+            <block sourceFile="/home/diego/ufmg/simian-2.3.33/../workspace/PasswordSafeLib/src/org/pwsafe/lib/datastore/PwsEntryBean.java" startLineNumber="493" endLineNumber="506"/>
+        </set>
+        <set lineCount="9">
+            <block sourceFile="/home/diego/ufmg/simian-2.3.33/../workspace/PasswordSafeSWT/src/org/pwsafe/passwordsafeswt/model/PasswordTreeContentProvider.java" startLineNumber="70" endLineNumber="85"/>
+            <block sourceFile="/home/diego/ufmg/simian-2.3.33/../workspace/PasswordSafeLib/src/org/pwsafe/lib/datastore/PwsEntryBean.java" startLineNumber="297" endLineNumber="311"/>
+            <block sourceFile="/home/diego/ufmg/simian-2.3.33/../workspace/PasswordSafeLib/src/org/pwsafe/lib/file/PwsField.java" startLineNumber="108" endLineNumber="121"/>
+        </set>
+        <set lineCount="10">
+            <block sourceFile="/home/diego/ufmg/simian-2.3.33/../workspace/PasswordSafeLib/src/org/pwsafe/lib/datastore/PwsEntryBean.java" startLineNumber="390" endLineNumber="399"/>
+            <block sourceFile="/home/diego/ufmg/simian-2.3.33/../workspace/PasswordSafeSWT/src/org/pwsafe/passwordsafeswt/dto/PwsEntryDTO.java" startLineNumber="218" endLineNumber="227"/>
+        </set>
+        <set lineCount="10">
+            <block sourceFile="/home/diego/ufmg/simian-2.3.33/../workspace/PasswordSafeLib/src/org/pwsafe/lib/file/PwsFieldTypeV2.java" startLineNumber="15" endLineNumber="24"/>
+            <block sourceFile="/home/diego/ufmg/simian-2.3.33/../workspace/PasswordSafeLib/src/org/pwsafe/lib/file/PwsFieldTypeV3.java" startLineNumber="14" endLineNumber="23"/>
+        </set>
+        <set lineCount="10">
+            <block sourceFile="/home/diego/ufmg/simian-2.3.33/../workspace/PasswordSafeLib/src/org/pwsafe/lib/file/PwsRecordV2.java" startLineNumber="37" endLineNumber="82"/>
+            <block sourceFile="/home/diego/ufmg/simian-2.3.33/../workspace/PasswordSafeLib/src/org/pwsafe/lib/file/PwsRecordV3.java" startLineNumber="44" endLineNumber="89"/>
+        </set>
+        <set lineCount="12">
+            <block sourceFile="/home/diego/ufmg/simian-2.3.33/../workspace/PasswordSafeLib/src/org/pwsafe/lib/datastore/PwsEntryBean.java" startLineNumber="120" endLineNumber="150"/>
+            <block sourceFile="/home/diego/ufmg/simian-2.3.33/../workspace/PasswordSafeSWT/src/org/pwsafe/passwordsafeswt/dto/PwsEntryDTO.java" startLineNumber="72" endLineNumber="102"/>
+        </set>
+        <set lineCount="12">
+            <block sourceFile="/home/diego/ufmg/simian-2.3.33/../workspace/PasswordSafeLib/test/org/pwsafe/lib/file/PwsFileFactoryTest.java" startLineNumber="82" endLineNumber="96"/>
+            <block sourceFile="/home/diego/ufmg/simian-2.3.33/../workspace/PasswordSafeLib/test/org/pwsafe/lib/file/PwsFileV3Test.java" startLineNumber="107" endLineNumber="121"/>
+        </set>
+        <set lineCount="12">
+            <block sourceFile="/home/diego/ufmg/simian-2.3.33/../workspace/PasswordSafeSWT/src/org/pwsafe/passwordsafeswt/action/ExportToTextAction.java" startLineNumber="34" endLineNumber="46"/>
+            <block sourceFile="/home/diego/ufmg/simian-2.3.33/../workspace/PasswordSafeSWT/src/org/pwsafe/passwordsafeswt/action/ExportToXMLAction.java" startLineNumber="34" endLineNumber="46"/>
+        </set>
+        <set lineCount="13">
+            <block sourceFile="/home/diego/ufmg/simian-2.3.33/../workspace/PasswordSafeLib/test/org/pwsafe/lib/datastore/PwsDataStoreTest.java" startLineNumber="100" endLineNumber="117"/>
+            <block sourceFile="/home/diego/ufmg/simian-2.3.33/../workspace/PasswordSafeLib/test/org/pwsafe/lib/datastore/PwsDataStoreTest.java" startLineNumber="130" endLineNumber="145"/>
+        </set>
+        <set lineCount="14">
+            <block sourceFile="/home/diego/ufmg/simian-2.3.33/../workspace/PasswordSafeLib/src/org/pwsafe/lib/crypto/InMemoryKey.java" startLineNumber="58" endLineNumber="79"/>
+            <block sourceFile="/home/diego/ufmg/simian-2.3.33/../workspace/PasswordSafeLib/src/org/pwsafe/lib/crypto/MemoryMappedKey.java" startLineNumber="80" endLineNumber="101"/>
+        </set>
+        <set lineCount="14">
+            <block sourceFile="/home/diego/ufmg/simian-2.3.33/../workspace/PasswordSafeLib/src/org/pwsafe/lib/datastore/PwsEntryBean.java" startLineNumber="677" endLineNumber="690"/>
+            <block sourceFile="/home/diego/ufmg/simian-2.3.33/../workspace/PasswordSafeLib/src/org/pwsafe/lib/datastore/PwsEntryBean.java" startLineNumber="654" endLineNumber="667"/>
+        </set>
+        <set lineCount="16">
+            <block sourceFile="/home/diego/ufmg/simian-2.3.33/../workspace/PasswordSafeSWT/src/org/pwsafe/passwordsafeswt/action/OpenFileAction.java" startLineNumber="34" endLineNumber="50"/>
+            <block sourceFile="/home/diego/ufmg/simian-2.3.33/../workspace/PasswordSafeSWT/src/org/pwsafe/passwordsafeswt/action/OpenFileReadWriteToggleAction.java" startLineNumber="35" endLineNumber="51"/>
+        </set>
+        <set lineCount="16">
+            <block sourceFile="/home/diego/ufmg/simian-2.3.33/../workspace/PasswordSafeLib/src/org/pwsafe/lib/datastore/PwsEntryBean.java" startLineNumber="650" endLineNumber="665"/>
+            <block sourceFile="/home/diego/ufmg/simian-2.3.33/../workspace/PasswordSafeLib/src/org/pwsafe/lib/datastore/PwsEntryBean.java" startLineNumber="618" endLineNumber="633"/>
+        </set>
+        <set lineCount="41">
+            <block sourceFile="/home/diego/ufmg/simian-2.3.33/../workspace/PasswordSafeSWT/src/org/pwsafe/passwordsafeswt/dto/PwsEntryDTO.java" startLineNumber="119" endLineNumber="214"/>
+            <block sourceFile="/home/diego/ufmg/simian-2.3.33/../workspace/PasswordSafeLib/src/org/pwsafe/lib/datastore/PwsEntryBean.java" startLineNumber="177" endLineNumber="274"/>
+        </set>
+        <summary duplicateFileCount="48" duplicateLineCount="819" duplicateBlockCount="88" totalFileCount="151" totalRawLineCount="21897" totalSignificantLineCount="8664" processingTime="296"/>
+    </check>
+</simian>

@@ -11,10 +11,10 @@ import danilofes.mes.simian.SimianResult;
 public class ParseFiles {
 
 	public static void main(String[] args) throws Exception {
-//		File cpdfile = new File("data/seed-cpd-25tkn.xml");
-//		CpdResult cpdResult = JAXB.unmarshal(cpdfile, CpdResult.class);
-//
-//		printResultSummary(cpdResult.duplications);
+		File cpdfile = new File("data/seed-cpd-25tkn.xml");
+		CpdResult cpdResult = JAXB.unmarshal(cpdfile, CpdResult.class);
+
+		printResultSummary(cpdResult.duplications);
 //		printResult(cpdResult.duplications);
 
 		File simianfile = new File("data/seed-simian-3loc.xml");
@@ -37,10 +37,12 @@ public class ParseFiles {
 		
 		int cloc = 0;
 		for (Duplication duplication : duplications) {
-			cloc += duplication.getLines() * duplication.getCodeFragments().size(); 
+			cloc += duplication.getLines() * (duplication.getCodeFragments().size() - 1); 
 		}
-		System.out.println(duplications.size() + " duplications");
-		System.out.println(cloc + " cloc");
+		System.out.print(duplications.size() + " duplications, ");
+		System.out.print(cloc + " cloc");
+		System.out.print(" (" + (100.0 * (double) cloc / 174388.0) + " %)");
+		System.out.println();
 	}
 	
 }

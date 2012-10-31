@@ -1,4 +1,4 @@
-package danilofes.mes.cpd;
+package danilofes.mes.simian;
 
 import java.util.List;
 
@@ -8,19 +8,17 @@ import javax.xml.bind.annotation.XmlElement;
 import danilofes.mes.CodeFragment;
 import danilofes.mes.Duplication;
 
-public class CpdDuplication implements Duplication {
+public class SimianDuplication implements Duplication {
 
 	@XmlAttribute
-	public int lines;
-	@XmlAttribute
-	public int tokens;
+	public int lineCount;
 	
-	@XmlElement(name="file")
-	public List<CpdCodeFragment> fragments;
+	@XmlElement(name="block")
+	public List<SimianCodeFragment> fragments;
 
 	@Override
 	public int getLines() {
-		return this.lines;
+		return this.lineCount;
 	}
 
 	@Override

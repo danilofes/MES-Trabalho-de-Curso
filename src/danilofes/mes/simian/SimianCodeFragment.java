@@ -1,24 +1,24 @@
-package danilofes.mes.cpd;
+package danilofes.mes.simian;
 
 import javax.xml.bind.annotation.XmlAttribute;
 
 import danilofes.mes.CodeFragment;
 
-public class CpdCodeFragment implements CodeFragment {
+public class SimianCodeFragment implements CodeFragment {
 
 	@XmlAttribute
-	public int line;
+	public int startLineNumber;
 	@XmlAttribute
-	public String path;
+	public String sourceFile;
 
 	@Override
 	public String getFilePath() {
-		return this.path;
+		return this.sourceFile;
 	}
 
 	@Override
 	public int getLine() {
-		return this.line;
+		return this.startLineNumber;
 	}
 
 }

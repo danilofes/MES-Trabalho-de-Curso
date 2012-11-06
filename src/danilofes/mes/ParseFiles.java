@@ -5,44 +5,60 @@ import java.util.List;
 
 import javax.xml.bind.JAXB;
 
-import danilofes.mes.cpd.CpdResult;
-import danilofes.mes.simian.SimianResult;
+import danilofes.mes.db.dao.CloneResultDAO;
+import danilofes.mes.db.entity.generic.GenericCloneResult;
+import danilofes.mes.db.entity.generic.GenericDuplication;
+import danilofes.mes.db.entity.simian.SimianCloneResult;
 
 public class ParseFiles {
 
+	private static CloneResultDAO resultDao = new CloneResultDAO();
+
 	public static void main(String[] args) throws Exception {
-		File cpdfile = new File("data/seed-cpd-25tkn.xml");
-		CpdResult cpdResult = JAXB.unmarshal(cpdfile, CpdResult.class);
 
-		printResultSummary(cpdResult.duplications);
-//		printResult(cpdResult.duplications);
+		// createSimianResults();
+		//
+		// createCpdResults();
+		//
+		// createCloneDiggerResult();
+		printResultSummary();
 
+	}
+
+	private static void createCloneDiggerResult() {
+		File cloneDiggerFile = new File("data/clonedigger.xml");
+		GenericCloneResult cloneDiggerResult = JAXB.unmarshal(cloneDiggerFile, GenericCloneResult.class);
+		cloneDiggerResult.setAppName("clonedigger");
+		resultDao.create(cloneDiggerResult);
+	}
+
+	private static void createCpdResults() {
+		File cpdfile = new File("data/cpd.xml");
+		GenericCloneResult cpdResult = JAXB.unmarshal(cpdfile, GenericCloneResult.class);
+		cpdResult.setAppName("cpd-pmd");
+		resultDao.create(cpdResult);
+	}
+
+	private static void createSimianResults() {
 		File simianfile = new File("data/seed-simian-3loc.xml");
-		SimianResult simianResult = JAXB.unmarshal(simianfile, SimianResult.class);
-
-		printResultSummary(simianResult.duplications);
-//		printResult(simianResult.duplications);
+		SimianCloneResult simianResult = JAXB.unmarshal(simianfile, SimianCloneResult.class);
+		simianResult.setAppName("simian-result");
+		resultDao.create(simianResult);
 	}
 
-	private static void printResult(List<? extends Duplication> duplications) {
-		for (Duplication duplication : duplications) {
-			System.out.println(duplication.getLines() + " duplicated lines.");
-			for (CodeFragment fragment : duplication.getCodeFragments()) {
-				System.out.println(fragment.getFilePath() + ": line " + fragment.getLine());
+	private static void printResultSummary() throws Exception {
+		List<GenericCloneResult> list = resultDao.list();
+		for (GenericCloneResult cloneResult : list) {
+			System.out.println(String.format("Aplicativo: %s", cloneResult.getAppName()));
+			int cloc = 0;
+			List<GenericDuplication> duplications = cloneResult.getDuplications();
+			for (GenericDuplication duplication : duplications) {
+				cloc += duplication.getLines() * (duplication.getFragments().size() - 1);
 			}
+			System.out.print(duplications.size() + " duplications, ");
+			System.out.print(cloc + " cloc");
+			System.out.print(" (" + (100.0 * (double) cloc / 174388.0) + " %)");
+			System.out.println();
 		}
 	}
-
-	private static void printResultSummary(List<? extends Duplication> duplications) {
-		
-		int cloc = 0;
-		for (Duplication duplication : duplications) {
-			cloc += duplication.getLines() * (duplication.getCodeFragments().size() - 1); 
-		}
-		System.out.print(duplications.size() + " duplications, ");
-		System.out.print(cloc + " cloc");
-		System.out.print(" (" + (100.0 * (double) cloc / 174388.0) + " %)");
-		System.out.println();
-	}
-	
 }

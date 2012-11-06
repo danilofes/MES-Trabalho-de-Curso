@@ -1,0 +1,5 @@
+create table dcc890.Duplication(
+	id INTEGER PRIMARY KEY GENERATED ALWAYS AS IDENTITY (START WITH 1, INCREMENT BY 1),
+	cloneResultId INTEGER,
+	lines INTEGER
+);

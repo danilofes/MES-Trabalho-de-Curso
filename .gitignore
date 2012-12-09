@@ -8,3 +8,9 @@
 # Derby #
 *.lck
 *.log
+
+# tex #
+*.aux
+*.bbl
+*.blg
+*.dvi

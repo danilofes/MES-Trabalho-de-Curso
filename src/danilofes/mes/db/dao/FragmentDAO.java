@@ -23,7 +23,9 @@ public class FragmentDAO extends DBFactory {
 		statement.setInt(2, fragment.getLine());
 		statement.setString(3, fragment.getPath());
 
+		this.log(sql.toString());
 		statement.executeUpdate();
+		
 		return this.getLastInsertedId("Fragment");
 	}
 
@@ -81,4 +83,9 @@ public class FragmentDAO extends DBFactory {
 
 		return list;
 	}
+	
+	public void clear() throws SQLException {
+		super.clearRows("Fragment");
+	}
+
 }

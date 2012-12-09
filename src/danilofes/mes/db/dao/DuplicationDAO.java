@@ -24,7 +24,7 @@ public class DuplicationDAO extends DBFactory {
 		PreparedStatement statement = CONNECTION.prepareStatement(sql.toString(), Statement.RETURN_GENERATED_KEYS);
 		statement.setInt(1, cloneResultId);
 		statement.setInt(2, duplication.getLines());
-		System.out.println(sql.toString());
+		this.log(sql.toString());
 		statement.executeUpdate();
 		Integer id = this.getLastInsertedId("Duplication");
 
@@ -96,4 +96,9 @@ public class DuplicationDAO extends DBFactory {
 		}
 		return list;
 	}
+	
+	public void clear() throws SQLException {
+		super.clearRows("Duplication");
+	}
+
 }

@@ -38,6 +38,20 @@ public class DBFactory {
 		ResultSet result = statement.executeQuery();
 
 		return result != null && result.next() ? result.getInt(1) : null;
-
 	}
+	
+	protected void clearRows(String tableName) throws SQLException {
+		StringBuilder sql = new StringBuilder();
+		sql.append("delete from ");
+		sql.append(DBFactory.SCHEMA);
+		sql.append(".");
+		sql.append(tableName);
+		PreparedStatement statement = CONNECTION.prepareStatement(sql.toString());
+		statement.executeUpdate();
+	}
+
+	protected void log(String sql) {
+		//System.out.println(sql);
+	}
+	
 }

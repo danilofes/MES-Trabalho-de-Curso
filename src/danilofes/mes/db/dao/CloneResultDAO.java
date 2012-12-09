@@ -91,4 +91,9 @@ public class CloneResultDAO extends DBFactory {
 		}
 		return list;
 	}
+	
+	public void clear() throws SQLException {
+		super.clearRows("CloneResult");
+	}
+
 }

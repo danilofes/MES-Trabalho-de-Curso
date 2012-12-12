@@ -11,6 +11,7 @@ import danilofes.mes.db.dao.DuplicationDAO;
 import danilofes.mes.db.dao.FragmentDAO;
 import danilofes.mes.db.entity.generic.GenericCloneResult;
 import danilofes.mes.db.entity.generic.GenericDuplication;
+import danilofes.mes.db.entity.generic.GenericFragment;
 import danilofes.mes.db.entity.simian.SimianCloneResult;
 
 public class ParseFiles {
@@ -60,7 +61,9 @@ public class ParseFiles {
 			int cloc = 0;
 			List<GenericDuplication> duplications = cloneResult.getDuplications();
 			for (GenericDuplication duplication : duplications) {
-				cloc += duplication.getLines() * (duplication.getFragments().size() - 1);
+				List<GenericFragment> fragments = duplication.getFragments();
+				//System.out.println(fragments.get(0).getPath());
+				cloc += duplication.getLines() * (fragments.size() - 1);
 			}
 			System.out.print(duplications.size() + " duplications, ");
 			System.out.print(cloc + " cloc");

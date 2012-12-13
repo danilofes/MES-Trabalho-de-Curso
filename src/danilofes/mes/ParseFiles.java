@@ -21,11 +21,11 @@ public class ParseFiles {
 	public static void main(String[] args) throws Exception {
 
 		/*
+		 */
 		clearDb();
 		createSimianResults();
 		createCpdResults();
 		createCloneDiggerResult();
-		*/
 		
 		printResultSummary();
 	}
@@ -39,7 +39,7 @@ public class ParseFiles {
 	}
 
 	private static void createCpdResults() {
-		File cpdfile = new File("data/seed-cpd-25tkn.xml");
+		File cpdfile = new File("data/seed-cpd.xml");
 		GenericCloneResult cpdResult = JAXB.unmarshal(cpdfile, GenericCloneResult.class);
 		cpdResult.setAppName("cpd");
 		resultDao.create(cpdResult);
@@ -47,7 +47,7 @@ public class ParseFiles {
 	}
 
 	private static void createSimianResults() {
-		File simianfile = new File("data/seed-simian-3loc.xml");
+		File simianfile = new File("data/seed-simian.xml");
 		SimianCloneResult simianResult = JAXB.unmarshal(simianfile, SimianCloneResult.class);
 		simianResult.setAppName("simian");
 		resultDao.create(simianResult);
@@ -67,7 +67,8 @@ public class ParseFiles {
 			}
 			System.out.print(duplications.size() + " duplications, ");
 			System.out.print(cloc + " cloc");
-			System.out.print(" (" + (100.0 * (double) cloc / 174388.0) + " %)");
+			final double totalLoc = 169333.0; // 22296 + 55461 + 91576 = 169333;
+			System.out.print(" (" + (100.0 * (double) cloc / totalLoc) + " %)");
 			System.out.println();
 		}
 	}

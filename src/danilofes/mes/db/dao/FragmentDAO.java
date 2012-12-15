@@ -25,7 +25,7 @@ public class FragmentDAO extends DBFactory {
 
 		this.log(sql.toString());
 		statement.executeUpdate();
-		
+
 		return this.getLastInsertedId("Fragment");
 	}
 
@@ -45,6 +45,28 @@ public class FragmentDAO extends DBFactory {
 
 		result = statement.executeQuery();
 		return result != null && result.next() ? result.getInt(1) : 0;
+	}
+
+	public List<GenericFragment> findByCloneResultName(String cloneResultName) throws SQLException {
+		StringBuilder sql = new StringBuilder();
+
+		sql.append("select ");
+		sql.append("f.id ");
+		sql.append(",f.duplicationId ");
+		sql.append(",f.line ");
+		sql.append(",f.path ");
+		sql.append("from dcc890.Fragment f ");
+		sql.append("join dcc890.Duplication d ");
+		sql.append("on d.id = f.duplicationId ");
+		sql.append("join dcc890.CloneResult c ");
+		sql.append("on c.id = d.cloneResultId ");
+		sql.append("where c.appname = ?");
+		PreparedStatement statement = CONNECTION.prepareStatement(sql.toString());
+		statement.setString(1, cloneResultName);
+		
+		ResultSet result = statement.executeQuery();
+
+		return this.parse(result);
 	}
 
 	public List<GenericFragment> findByDuplication(int duplicationId) throws SQLException {
@@ -83,7 +105,7 @@ public class FragmentDAO extends DBFactory {
 
 		return list;
 	}
-	
+
 	public void clear() throws SQLException {
 		super.clearRows("Fragment");
 	}

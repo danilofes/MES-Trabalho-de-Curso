@@ -60,6 +60,22 @@ public class DuplicationDAO extends DBFactory {
 
 		return result != null && result.next() ? result.getInt(1) : 0;
 	}
+	
+	public List<GenericDuplication> list() throws SQLException {
+		StringBuilder sql = new StringBuilder();
+
+		sql.append("select ");
+		sql.append("d.id ");
+		sql.append(",d.lines ");
+		sql.append(",d.cloneResultId ");
+		sql.append("from dcc890.Duplication d ");
+		sql.append("order by  d.lines");
+		PreparedStatement statement = CONNECTION.prepareStatement(sql.toString());
+
+		ResultSet result = statement.executeQuery();
+
+		return this.parse(result);
+	}
 
 	public List<GenericDuplication> findByCloneResult(Integer cloneResultId) throws SQLException {
 		StringBuilder sql = new StringBuilder();

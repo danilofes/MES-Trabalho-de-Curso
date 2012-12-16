@@ -52,7 +52,7 @@ join dcc890.Fragment f1 on (f1.id = fragment1)
 join dcc890.Fragment f2 on (f2.id = fragment2)
 join dcc890.Duplication du on (du.id = f1.duplicationId)
 join dcc890.CloneResult rs on (rs.id = du.cloneResultId)
-where fp.id = 7292
+where fp.id = 6686
 order by f1.line;
 
 

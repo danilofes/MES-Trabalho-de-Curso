@@ -1,29 +1,47 @@
 package danilofes.mes;
 
+import java.util.ArrayList;
+import java.util.List;
+
 
 public class CloneClassification {
 
-	private enum Criticity {FALSE_POSITIVE, CLONE, HARMFUL_CLONE}
+	enum Criticity {FALSE_POSITIVE, CLONE, HARMFUL_CLONE}
+	
+	private static List<CloneClassification> items = new ArrayList<CloneClassification>();
 	
 	long id;
 	Criticity criticity;
-	String type;
-	String subtype;
+	String type = "";
+	String subtype = "";
 	
 	public CloneClassification(Criticity criticity, long id) {
 		this.id = id;
 		this.criticity = criticity;
 	}
+
 	public static CloneClassification falsePositive(long id) {
-		return new CloneClassification(Criticity.FALSE_POSITIVE, id);
+		CloneClassification cloneClassification = new CloneClassification(Criticity.FALSE_POSITIVE, id);
+		items.add(cloneClassification);
+		return cloneClassification;
 	}
 	public static CloneClassification codeClone(long id) {
-		return new CloneClassification(Criticity.CLONE, id);
+		CloneClassification cloneClassification = new CloneClassification(Criticity.CLONE, id);
+		items.add(cloneClassification);
+		return cloneClassification;
 	}
 	public static CloneClassification harmfulClone(long id) {
-		return new CloneClassification(Criticity.HARMFUL_CLONE, id);
+		CloneClassification cloneClassification = new CloneClassification(Criticity.HARMFUL_CLONE, id);
+		items.add(cloneClassification);
+		return cloneClassification;
 	}
+	
 	public CloneClassification cp(String line, String tool, long id) {
+		String[] linesStr = line.split("[\\-> ]+");
+		if (linesStr.length != 4) {
+			throw new RuntimeException("Formato inválido: " + line);
+		}
+		
 		// TODO
 		return this;
 	}
@@ -79,6 +97,19 @@ public class CloneClassification {
 		return this;
 	}
 
+	public static void printResults() {
+		System.out.println(items.size() + " resultados:");
+		for (CloneClassification cc : items) {
+			System.out.println(cc);
+		}
+		System.out.println("===========================");
+	}
+	
+	@Override
+	public String toString() {
+		return String.format("%d %s %s %s", this.id, this.criticity.toString(), this.type, this.subtype);
+	}
+	
 	enum ForkingType {
 		HARDWARE, PLATFORM, EXPERIMENTAL
 	}

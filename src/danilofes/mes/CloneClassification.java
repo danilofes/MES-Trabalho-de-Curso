@@ -15,6 +15,12 @@ public class CloneClassification {
 	String type = "";
 	String subtype = "";
 	
+	boolean simian = false;
+	boolean cpd = false;
+	boolean cloneDigger = false;
+
+	private DuplicatedLines f1Lines = new DuplicatedLines();
+	
 	public CloneClassification(Criticity criticity, long id) {
 		this.id = id;
 		this.criticity = criticity;
@@ -41,8 +47,18 @@ public class CloneClassification {
 		if (linesStr.length != 4) {
 			throw new RuntimeException("Formato inválido: " + line);
 		}
+		this.f1Lines.markRange(Integer.parseInt(linesStr[0]), Integer.parseInt(linesStr[1]));
 		
-		// TODO
+		if (tool.equals("cpd")) {
+			this.cpd = true;
+		} else if (tool.equals("simian")) {
+			this.simian = true;
+		} else if (tool.equals("clonedigger")) {
+			this.cloneDigger = true;
+		} else {
+			throw new RuntimeException("Ferramenta inválida: " + tool);
+		}
+		
 		return this;
 	}
 	public CloneClassification forking() {
@@ -107,11 +123,16 @@ public class CloneClassification {
 	
 	@Override
 	public String toString() {
-		return String.format("%d %s %s %s", this.id, this.criticity.toString(), this.type, this.subtype);
+		return String.format("%d %s %s %s", this.clonedLines(), this.criticity.toString(), this.type, this.subtype);
+	}
+	
+	public int clonedLines() {
+		return this.f1Lines.count();
 	}
 	
 	enum ForkingType {
 		HARDWARE, PLATFORM, EXPERIMENTAL
 	}
+	
 }
 

@@ -1,5 +1,6 @@
 package danilofes.mes;
 
+import java.util.Collection;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
@@ -73,7 +74,7 @@ public class CloneReports {
 	}
 
 	private void printResultIntersections(CloneMatrixWrapper wrapper) {
-		Iterator<Entry<String, List<CloneIntersectionMatrix>>> iterator = wrapper.getMatrix().entrySet().iterator();
+		Iterator<Entry<String, Map<Integer, CloneIntersectionMatrix>>> iterator = wrapper.getMatrix().entrySet().iterator();
 
 		int cloneDiggerAndSimianIntersectionCount = 0;
 		int cloneDiggerAndCpdIntersectionCount = 0;
@@ -82,31 +83,49 @@ public class CloneReports {
 		int justCpdCount = 0;
 		int justCloneDiggerCount = 0;
 		int fullIntersectionCount = 0;
+		int simianCount = 0;
+		int cpdCount = 0;
+		int cloneDiggerCount = 0;
 
 		while (iterator.hasNext()) {
-			Entry<String, List<CloneIntersectionMatrix>> entry = iterator.next();
-			List<CloneIntersectionMatrix> fragments = entry.getValue();
+			Entry<String, Map<Integer, CloneIntersectionMatrix>> entry = iterator.next();
+			Collection<CloneIntersectionMatrix> fragments = entry.getValue().values();
 			for (CloneIntersectionMatrix fragment : fragments) {
-				if (isTrue(fragment.cloneDigger) && isTrue(fragment.cpd) && isTrue(fragment.simian)) {
+				if (fragment.cloneDigger && fragment.cpd && fragment.simian) {
 					fullIntersectionCount++;
-				} else if (isTrue(fragment.cloneDigger) && isTrue(fragment.cpd) && !isTrue(fragment.simian)) {
+				} else if (fragment.cloneDigger && fragment.cpd && !fragment.simian) {
 					cloneDiggerAndCpdIntersectionCount++;
-				} else if (isTrue(fragment.cloneDigger) && !isTrue(fragment.cpd) && isTrue(fragment.simian)) {
+				} else if (fragment.cloneDigger && !fragment.cpd && fragment.simian) {
 					cloneDiggerAndSimianIntersectionCount++;
-				} else if (!isTrue(fragment.cloneDigger) && isTrue(fragment.cpd) && isTrue(fragment.simian)) {
+				} else if (!fragment.cloneDigger && fragment.cpd && fragment.simian) {
 					simianAndCpdIntersectionCount++;
-				} else if (!isTrue(fragment.cloneDigger) && !isTrue(fragment.cpd) && isTrue(fragment.simian)) {
+				} else if (!fragment.cloneDigger && !fragment.cpd && fragment.simian) {
 					justSimianCount++;
-				} else if (isTrue(fragment.cloneDigger) && !isTrue(fragment.cpd) && !isTrue(fragment.simian)) {
+				} else if (fragment.cloneDigger && !fragment.cpd && !fragment.simian) {
 					justCloneDiggerCount++;
-				} else if (!isTrue(fragment.cloneDigger) && isTrue(fragment.cpd) && !isTrue(fragment.simian)) {
+				} else if (!fragment.cloneDigger && fragment.cpd && !fragment.simian) {
 					justCpdCount++;
 				} else {
-					System.out.println(String.format("Houston! We have a problem! [%s : %s]", entry.getKey(), fragment.line));
+					System.out.println(String.format("Houston! We have a problem! [%s]", entry.getKey()));
 				}
+				
+				if (fragment.cloneDigger) {
+					cloneDiggerCount++;
+				} 
+				if (fragment.cpd) {
+					cpdCount++;
+				}
+				if (fragment.simian) {
+					simianCount++;
+				} 
+				
 			}
 
 		}
+		System.out.println(String.format("Total Clone Digger : [%s] - [%.1f]%%", cloneDiggerCount, percentageOfSeedLoc(cloneDiggerCount)));
+		System.out.println(String.format("Total Simian : [%s] - [%.1f]%%", simianCount, percentageOfSeedLoc(simianCount)));
+		System.out.println(String.format("Total CPD : [%s] - [%.1f]%%", cpdCount, percentageOfSeedLoc(cpdCount)));
+
 		System.out.println(String.format("Somente Clone Digger : [%s] - [%.1f]%%", justCloneDiggerCount, percentageOfSeedLoc(justCloneDiggerCount)));
 		System.out.println(String.format("Somente Simian : [%s] - [%.1f]%%", justSimianCount, percentageOfSeedLoc(justSimianCount)));
 		System.out.println(String.format("Somente CPD : [%s] - [%.1f]%%", justCpdCount, percentageOfSeedLoc(justCpdCount)));
@@ -118,10 +137,6 @@ public class CloneReports {
 		System.out.println(String.format("Interseção : Simian e CPD : [%s] - [%.1f]%%", simianAndCpdIntersectionCount,
 				percentageOfSeedLoc(simianAndCpdIntersectionCount)));
 		System.out.println(String.format("Interseção : Todos : [%s] - [%.1f]%%", fullIntersectionCount, percentageOfSeedLoc(fullIntersectionCount)));
-	}
-
-	private boolean isTrue(Boolean value) {
-		return value != null && value;
 	}
 
 	private Double percentageOfSeedLoc(int loc) {

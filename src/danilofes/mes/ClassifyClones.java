@@ -10,7 +10,8 @@ public class ClassifyClones {
 
 	static Random RAND = new Random(82734710092134750L);
 	private static int nextFilePair() {
-		return RAND.nextInt(19800) + 1;
+		//return RAND.nextInt(19800) + 1;
+		return RAND.nextInt(5128) + 1;
 	}
 
 	/**
@@ -218,6 +219,198 @@ public class ClassifyClones {
 		cp("31-34 -> 13-16", "simian", 61155).
 		cp("31-33 -> 13-15", "simian", 59941);
 		// Método accept do padrão visitor em comum.
+		
+		
+		//main/com/sydle/ses/common/dao/attribute/SesAttribute.java
+		//main/com/sydle/ses/workflow/dao/core/process/WflSequenceFlow.java
+		codeClone(3069).exactMatch().snippet().
+		cp("433-460 -> 138-165", "cpd", 87306).
+		cp("433-461 -> 138-166", "cpd", 80967).
+		cp("440-448 -> 145-153", "simian", 70364).
+		cp("449-454 -> 154-159", "simian", 67777);
+		// Métodos isInsertable, isUpdatable, isDeletable repetidos.
+		
+		//18664
+		//web/com/sydle/ses/common/web/usercontrol/domain/action/DomainCreate.java
+		//web/com/sydle/ses/common/web/usercontrol/user/action/ForgotPassword.java                                                        
+		falsePositive(18664).
+		cp("32-45 -> 28-41", "cpd", 94342);
+		// Método get perm e assinatura da action
+		
+		//1466
+		//main/com/sydle/ses/common/business/query/loader/SelectQueryFragmentAbstract.java
+		//main/com/sydle/ses/workflow/business/core/gadget/aggregator/ActivityInstanceCount.java                                          
+		falsePositive(1466).
+		cp("14-33 -> 86-105", "cpd", 74194).
+		cp("14-18 -> 86-90", "simian", 64229).
+		cp("14-17 -> 86-89", "simian", 61695).
+		cp("15-31 -> 87-103", "cpd", 91573);
+		// Métodos addFilter, addGroupBy e addOrderBy vazios
+		
+		//3468
+		//main/com/sydle/ses/common/dao/attribute/SesAttributeInstanceValue.java
+		//main/com/sydle/ses/common/dao/attribute/SesAttributeSet.java                                                                    
+		falsePositive(3468).
+		cp("133-160 -> 64-91", "cpd", 87432).                                                         
+		cp("133-161 -> 64-92", "cpd", 81122).                                                         
+		cp("140-148 -> 71-79", "simian", 70200).                                                      
+		cp("149-154 -> 80-85", "simian", 67943);
+		// Métodos isInsertable, isUpdatable, isDeletable
+		
+		//6941
+		//main/com/sydle/ses/workflow/business/core/lane/LaneValidator.java
+		//main/com/sydle/ses/workflow/business/core/process/ProcessVersionTesterValidator.java                                            
+		
+		//3302
+		//main/com/sydle/ses/common/dao/attribute/SesAttributeHist.java
+		//main/com/sydle/ses/workflow/dao/core/processinstance/WflProcessingItem.java                                                     
+		
+		//19080      |web/com/sydle/ses/common/web/usercontrol/group/action/GroupDelete.java                                                          |web/com/sydle/ses/common/web/usercontrol/role/action/RoleList.java                                                              
+		
+		//7751       |main/com/sydle/ses/workflow/dao/core/connector/WflConnectorFile.java                                                            |main/com/sydle/ses/workflow/dao/core/process/WflErrorEvent.java                                                                 
+		
+		//19325      |web/com/sydle/ses/common/web/usercontrol/permission/action/PermissionCreate.java                                                |web/com/sydle/ses/common/web/usercontrol/user/action/UserSubordinateAdd.java                                                    
+		
+		//18057      |web/com/sydle/seed/cloud/web/account/action/Index.java                                                                          |web/com/sydle/ses/common/web/usercontrol/user/action/UserUpdate.java                                                            
+
+		//19709      |web/com/sydle/ses/common/web/usercontrol/user/action/UserCreate.java                                                            |web/com/sydle/ses/common/web/usercontrol/user/action/UserSubordinateAdd.java                                                    
+		
+		
+		//8917       |main/com/sydle/ses/workflow/dao/core/processinstance/WflGraphicalElementInstance.java                                           |main/com/sydle/ses/workflow/dao/core/processinstance/WflScheduledEvent.java                                                     
+		
+		
+		//7119       |main/com/sydle/ses/workflow/business/core/processinstance/graphicalelement/TokenValidator.java                                  |main/com/sydle/ses/workflow/business/core/processinstance/graphicalelement/activity/ActivityInstanceValidator.java              
+		
+		//19430      |web/com/sydle/ses/common/web/usercontrol/permission/action/PermissionUpdate.java                                                |web/com/sydle/ses/common/web/usercontrol/user/action/ExpiredPassword.java                                                       
+		
+		
+		//3774       |main/com/sydle/ses/common/dao/attribute/SesAttributeSetInstanceHist.java                                                        |main/com/sydle/ses/common/dao/unit/SesUnit.java                                                                                 
+		
+		//3937
+		//2155
+		//1226
+		//4426
+		//5028
+		
+		
+		// Apenas business
+		//1
+		//main/com/sydle/dashboard/business/common/config/ConfigAbstract.java
+		//main/com/sydle/dashboard/business/gadget/aggregator/GadgetAggregatorAbstract.java                                               
+		codeClone(1).templating().boilerPlating().
+		cp("46-49 -> 39-42", "simian", 61865).
+		cp("54-57 -> 31-34", "simian", 61788);
+		// Apenas método getName e getId iguais. Classes implementam mesma interface
+		// ConfigIf mas não herdam da mesma superclasse, dificultando reúso.
+		
+		
+		//main/com/sydle/seed/cloud/business/integration/cielo/message/Authorization.java
+		//main/com/sydle/seed/cloud/business/integration/cielo/message/OrderData.java                                                     
+		codeClone(503).templating().boilerPlating().
+		cp("45-54 -> 94-103", "clonedigger", 118885).
+		cp("56-79 -> 105-128", "cpd", 76844).                                                         
+		cp("62-71 -> 60-69", "clonedigger", 118887).                                                  
+		cp("62-66 -> 111-115", "simian", 64190).                                                      
+		cp("73-96 -> 71-94", "cpd", 76848).                                                           
+		cp("79-83 -> 77-81", "simian", 64753).                                                        
+		cp("80-90 -> 78-88", "cpd", 114336).                                                          
+		cp("80-83 -> 78-81", "simian", 61200);
+		// Java beans com pares set get semelhantes, mas diferentes. pares get set iguais: DateTime, value
+
+		
+		//1005
+		//main/com/sydle/ses/common/business/attribute/dataprovider/AttributeValueOptionBean.java
+		//main/com/sydle/ses/workflow/business/integration/processinstance/dto/ProcessInstance.java                                       
+		codeClone(503).templating().boilerPlating().
+		cp("29-32 -> 50-53", "simian", 60029);
+		// Java beans com método getCode idêntico
+		
+		//1507
+		//main/com/sydle/ses/common/business/usercontrol/RoleBS.java
+		//main/com/sydle/ses/common/business/usercontrol/RoleBS.java
+		codeClone(1507).customization().specialize().
+		cp("27-29 -> 63-65", "cpd", 89648);
+		// Dois métodos dentro da mesma classe montam uma consulta que inicia igual
+		// mas possui um filtro a mais. O código duplicado é muito pequeno e não
+		// justifica um refactoring.
+		
+		
+		//2009
+		//main/com/sydle/ses/common/business/widget/DateTimeBoxWidget.java
+		//main/com/sydle/ses/common/business/widget/YesNoComboBoxWidget.java                                                              
+		harmfulClone(2009).templating().parameterized().
+		cp("18-34 -> 18-34", "clonedigger", 115854).
+		cp("18-25 -> 18-25", "cpd", 76391).
+		cp("23-23 -> 23-23", "cpd", 104865).
+		cp("23-25 -> 23-25", "cpd", 100892).
+		cp("23-23 -> 23-23", "cpd", 93866).
+		cp("23-25 -> 23-25", "cpd", 91361).                                                           
+		cp("23-25 -> 23-25", "cpd", 85497).                                                           
+		cp("23-25 -> 23-25", "cpd", 79222).                                                           
+		cp("23-25 -> 23-25", "simian", 58925).                                                        
+		cp("26-32 -> 26-32", "cpd", 115648).                                                          
+		cp("27-32 -> 27-32", "simian", 69056).                                                        
+		cp("30-32 -> 30-32", "simian", 48219).                                                        
+		cp("33-38 -> 33-38", "cpd", 86067).                                                           
+		cp("33-41 -> 33-41", "cpd", 75254).                                                           
+		cp("34-38 -> 34-38", "simian", 62959).                                                        
+		cp("34-37 -> 34-37", "simian", 60958).                                                        
+		cp("35-41 -> 35-41", "cpd", 101459);
+		// Código switch para construir um objeto muito parecido, onde a única
+		// diferença é o tipo construído. Usando metaprogramação seria possível
+		// reutilizar o código.
+		
+		//2511
+		//main/com/sydle/ses/common/business/widget/IntegerBoxWidget.java
+		//main/com/sydle/ses/common/business/widget/MultipleMoneyBoxWidget.java
+		harmfulClone(2511).templating().parameterized().
+		cp("18-34 -> 18-34", "clonedigger", 115929).                                                  
+		cp("18-25 -> 18-25", "cpd", 76170).                                                           
+		cp("23-23 -> 23-23", "cpd", 104523).                                                          
+		cp("23-25 -> 23-25", "cpd", 100626).                                                          
+		cp("23-23 -> 23-23", "cpd", 93641).                                                           
+		cp("23-25 -> 23-25", "cpd", 91099).                                                           
+		cp("23-25 -> 23-25", "cpd", 85220).                                                           
+		cp("23-25 -> 23-25", "cpd", 78960).                                                           
+		cp("23-25 -> 23-25", "simian", 59187).                                                        
+		cp("26-32 -> 26-32", "cpd", 115460).                                                          
+		cp("27-32 -> 27-32", "simian", 68868).                                                        
+		cp("30-32 -> 30-32", "simian", 48606).                                                        
+		cp("33-38 -> 33-38", "cpd", 85868).                                                           
+		cp("33-41 -> 33-41", "cpd", 75067).                                                           
+		cp("34-38 -> 34-38", "simian", 63136).                                                        
+		cp("34-37 -> 34-37", "simian", 60770).                                                        
+		cp("35-41 -> 35-41", "cpd", 101258);
+		// Código switch para construir um objeto muito parecido, onde a única
+		// diferença é o tipo construído. Usando metaprogramação seria possível
+		// reutilizar o código.
+		
+		
+		//6025
+		//main/com/sydle/ses/workflow/business/core/gadget/aggregator/ProcessInstanceAverageDurationDeviation.java
+		//main/com/sydle/ses/workflow/dao/core/processinstance/custom/loader/queryfragment/LastUpdateDateFilterQueryFragment.java         
+		harmfulClone(6025).templating().parameterized().
+		cp("79-81 -> 54-56", "simian", 53484).
+		cp("133-135 -> 54-56", "simian", 53452);
+		// Implementação idêntica de getRequiredTables retornando array vazio.
+		
+		//1285
+		
+		//6527
+		//main/com/sydle/ses/workflow/business/core/graphicalelement/activity/ActivityManager.java
+		//main/com/sydle/ses/workflow/business/core/graphicalelement/event/timer/TimerEventManager.java                                   
+				
+		//7029
+		//main/com/sydle/ses/workflow/business/core/process/SLAConfigValidator.java
+		//main/com/sydle/ses/workflow/business/core/process/role/GraphicalElementRoleValidator.java                                       
+				
+		//7531
+		//main/com/sydle/ses/workflow/business/integration/process/dto/ScriptTask.java
+		//main/com/sydle/ses/workflow/business/integration/process/dto/TerminateEndEvent.java                                             
+		
+		
+		
+		
 	}
 
 

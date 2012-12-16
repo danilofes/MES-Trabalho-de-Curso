@@ -41,7 +41,7 @@ group by f1.path, f1.line, f1.endLine, f2.path, f2.line, f2.endLine, du.cloneRes
 -- 61175 rows selected
 
 -- Detalhes de um FilePair
-select path1, path2 from dcc890.FilePair where id = 6369;
+select path1, path2 from dcc890.FilePair where id = 7292;
 select
   'cp("'||trim(char(f1.line)) ||'-'|| trim(char(f1.endLine)) ||' -> '|| trim(char(f2.line)) ||'-'|| trim(char(f2.endLine))||'", "'
   ||rs.appName||'", '
@@ -52,7 +52,7 @@ join dcc890.Fragment f1 on (f1.id = fragment1)
 join dcc890.Fragment f2 on (f2.id = fragment2)
 join dcc890.Duplication du on (du.id = f1.duplicationId)
 join dcc890.CloneResult rs on (rs.id = du.cloneResultId)
-where fp.id = 6369
+where fp.id = 7292
 order by f1.line;
 
 

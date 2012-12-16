@@ -44,6 +44,10 @@ public class CloneClassification {
 		this.subtype = "API library protocols";
 		return this;
 	}
+	public CloneClassification languageIdioms() {
+		this.subtype = "general language or algorithmic idioms";
+		return this;
+	}
 	public CloneClassification parameterized() {
 		this.subtype = "parameterized code";
 		return this;

@@ -171,21 +171,53 @@ public class ClassifyClones {
 		cp("36-38 -> 51-53", "simian", 56821);
 		// Assinatura da action 
 		
-		//6369
 		//main/com/sydle/ses/workflow/business/core/goal/GoalVersionTesterValidator.java
 		//main/com/sydle/ses/workflow/business/core/indicator/IndicatorProcessRoleValidator.java                                          
-		falsePositive(6369).
-		cp("35-42 -> 85-92", "cpd", 91991).                                                           
+		harmfulClone(6369).exactMatch().crossCutting().
+		cp("35-42 -> 85-92", "cpd", 91991).
 		cp("35-42 -> 60-67", "cpd", 91990).
-		// Bloco catch idêntico, 
-		cp("75-82 -> 85-92", "cpd", 92029).                                                           
-		cp("75-82 -> 60-67", "cpd", 92028).                                                           
+		cp("75-82 -> 85-92", "cpd", 92029).
+		cp("75-82 -> 60-67", "cpd", 92028).
 		cp("75-84 -> 85-94", "cpd", 90547);
+		// Bloco catch idêntico, em vários locais, exibindo a mesma mensagem e
+		// registrando no log. O código poderia ser centralizado.
 		
 		//13715
-		//15898
-		//6658
-		//7292
+		//main/com/sydle/ses/workflow/web/presentation/core/process/action/AttachedEventCreate.java
+		//main/com/sydle/ses/workflow/web/presentation/dashboard/gadget/action/GoalBarGadgetData.java
+		falsePositive(13715).
+		cp("20-26 -> 36-42", "cpd", 111411);
+		// Assinatura da action 
+		
+		//main/com/sydle/ses/workflow/web/presentation/core/process/role/action/ProcessRoleList.java
+		//main/com/sydle/ses/workflow/web/presentation/core/processinstance/action/ProcessInstanceSubjectChange.java                      
+		falsePositive(15898).
+		cp("23-29 -> 20-26", "cpd", 111796).                                                          
+		cp("23-33 -> 20-30", "cpd", 103721).                                                          
+		cp("23-29 -> 20-26", "cpd", 98593).                                                           
+		cp("23-29 -> 20-26", "cpd", 93123).                                                           
+		cp("28-30 -> 24-26", "cpd", 114836);
+		// Assinatura da action e uma linha em comum.
+		
+		//main/com/sydle/ses/workflow/business/core/graphicalelement/activity/SubprocessValidator.java
+		//main/com/sydle/ses/workflow/business/core/group/ProcessGroupValidator.java
+		falsePositive(6658).
+		cp("30-32 -> 42-44", "simian", 51713).                                                        
+		cp("30-32 -> 69-71", "simian", 51712).                                                        
+		cp("55-57 -> 42-44", "simian", 51694).                                                        
+		cp("55-57 -> 69-71", "simian", 51693);
+		// O código marcado é muito pequeno, atribuição e retorno de booleano.
+		// Logo acima do mesmo existe um trecho duplicado de catch idêntico.
+		
+		//main/com/sydle/ses/workflow/business/integration/process/dto/ErrorEndEvent.java
+		//main/com/sydle/ses/workflow/business/integration/process/dto/SignalIntermediateThrowEvent.java
+		codeClone(7292).templating().languageIdioms().
+		cp("31-37 -> 13-19", "cpd", 99724).
+		cp("31-38 -> 13-20", "cpd", 92800).
+		cp("31-35 -> 13-17", "simian", 64007).
+		cp("31-34 -> 13-16", "simian", 61155).
+		cp("31-33 -> 13-15", "simian", 59941);
+		// Método accept do padrão visitor em comum.
 	}
 
 

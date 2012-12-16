@@ -1,8 +1,8 @@
 package danilofes.mes.db.matrix;
 
 public class CloneIntersectionMatrix {
-	Integer line;
-	Boolean cpd;
-	Boolean simian;
-	Boolean cloneDigger;
+	public Integer line;
+	public Boolean cpd;
+	public Boolean simian;
+	public Boolean cloneDigger;
 }

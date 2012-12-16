@@ -66,7 +66,7 @@ public class CloneMatrixWrapper {
 
 	}
 
-	private CloneIntersectionMatrix getFragmentByLine(List<CloneIntersectionMatrix> matrixIntersections, Integer line) {
+	public CloneIntersectionMatrix getFragmentByLine(List<CloneIntersectionMatrix> matrixIntersections, Integer line) {
 		for (CloneIntersectionMatrix matrix : matrixIntersections) {
 			if (matrix.line == line) {
 				return matrix;

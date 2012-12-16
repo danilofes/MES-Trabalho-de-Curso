@@ -1,8 +1,10 @@
 package danilofes.mes;
 
 import java.util.HashMap;
+import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
+import java.util.Map.Entry;
 
 import danilofes.mes.db.dao.CloneResultDAO;
 import danilofes.mes.db.dao.DuplicationDAO;
@@ -10,6 +12,7 @@ import danilofes.mes.db.dao.FragmentDAO;
 import danilofes.mes.db.entity.generic.GenericCloneResult;
 import danilofes.mes.db.entity.generic.GenericDuplication;
 import danilofes.mes.db.entity.generic.GenericFragment;
+import danilofes.mes.db.matrix.CloneIntersectionMatrix;
 import danilofes.mes.db.matrix.CloneMatrixWrapper;
 
 public class CloneReports {
@@ -65,8 +68,55 @@ public class CloneReports {
 		wrapper.addFragmentList(simianFragments, ParseFiles.SIMIAN);
 		wrapper.addFragmentList(cpdFragments, ParseFiles.CPD);
 
-		System.out.println(wrapper.getMatrix());
-
+		printResultIntersections(wrapper);
 	}
 
+	private void printResultIntersections(CloneMatrixWrapper wrapper) {
+		Iterator<Entry<String, List<CloneIntersectionMatrix>>> iterator = wrapper.getMatrix().entrySet().iterator();
+
+		int cloneDiggerAndSimianIntersectionCount = 0;
+		int cloneDiggerAndCpdIntersectionCount = 0;
+		int simianAndCpdIntersectionCount = 0;
+		int justSimianCount = 0;
+		int justCpdCount = 0;
+		int justCloneDiggerCount = 0;
+		int fullIntersection = 0;
+
+		while (iterator.hasNext()) {
+			Entry<String, List<CloneIntersectionMatrix>> entry = iterator.next();
+			List<CloneIntersectionMatrix> fragments = entry.getValue();
+			for (CloneIntersectionMatrix fragment : fragments) {
+				if (isTrue(fragment.cloneDigger) && isTrue(fragment.cpd) && isTrue(fragment.simian)) {
+					fullIntersection++;
+				} else if (isTrue(fragment.cloneDigger) && isTrue(fragment.cpd) && !isTrue(fragment.simian)) {
+					cloneDiggerAndCpdIntersectionCount++;
+				} else if (isTrue(fragment.cloneDigger) && !isTrue(fragment.cpd) && isTrue(fragment.simian)) {
+					cloneDiggerAndSimianIntersectionCount++;
+				} else if (!isTrue(fragment.cloneDigger) && isTrue(fragment.cpd) && isTrue(fragment.simian)) {
+					simianAndCpdIntersectionCount++;
+				} else if (!isTrue(fragment.cloneDigger) && !isTrue(fragment.cpd) && isTrue(fragment.simian)) {
+					justSimianCount++;
+				} else if (isTrue(fragment.cloneDigger) && !isTrue(fragment.cpd) && !isTrue(fragment.simian)) {
+					justCloneDiggerCount++;
+				} else if (!isTrue(fragment.cloneDigger) && isTrue(fragment.cpd) && !isTrue(fragment.simian)) {
+					justCpdCount++;
+				} else {
+					System.out.println(String.format("Houston! We have a problem! [%s : %s]", entry.getKey(), fragment.line));
+				}
+			}
+
+		}
+		System.out.println(String.format("Somente Clone Digger : [%s]", justCloneDiggerCount));
+		System.out.println(String.format("Somente Simian : [%s]", justSimianCount));
+		System.out.println(String.format("Somente CPD : [%s]", justCpdCount));
+
+		System.out.println(String.format("Interseção : Clone Digger e CPD : [%s]", cloneDiggerAndCpdIntersectionCount));
+		System.out.println(String.format("Interseção : Clone Digger e Simian : [%s]", cloneDiggerAndSimianIntersectionCount));
+		System.out.println(String.format("Interseção : Simian e CPD : [%s]", simianAndCpdIntersectionCount));
+		System.out.println(String.format("Interseção : Todos : [%s]", fullIntersection));
+	}
+
+	private boolean isTrue(Boolean value) {
+		return value != null && value;
+	}
 }

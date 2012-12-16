@@ -16,6 +16,8 @@ import danilofes.mes.db.matrix.CloneIntersectionMatrix;
 import danilofes.mes.db.matrix.CloneMatrixWrapper;
 
 public class CloneReports {
+	private static final double SEED_TOTAL_LOC = 169333.0;// 22296 + 55461 +
+															// 91576 = 169333;
 	private static CloneResultDAO resultDao = new CloneResultDAO();
 	private static FragmentDAO fragmentDAO = new FragmentDAO();
 	private static DuplicationDAO duplicationDAO = new DuplicationDAO();
@@ -33,8 +35,7 @@ public class CloneReports {
 			}
 			System.out.print(duplications.size() + " duplications, ");
 			System.out.print(cloc + " cloc");
-			final double totalLoc = 169333.0; // 22296 + 55461 + 91576 = 169333;
-			System.out.print(" (" + (100.0 * (double) cloc / totalLoc) + " %)");
+			System.out.print(" (" + (100.0 * (double) cloc / SEED_TOTAL_LOC) + " %)");
 			System.out.println();
 		}
 	}
@@ -80,14 +81,14 @@ public class CloneReports {
 		int justSimianCount = 0;
 		int justCpdCount = 0;
 		int justCloneDiggerCount = 0;
-		int fullIntersection = 0;
+		int fullIntersectionCount = 0;
 
 		while (iterator.hasNext()) {
 			Entry<String, List<CloneIntersectionMatrix>> entry = iterator.next();
 			List<CloneIntersectionMatrix> fragments = entry.getValue();
 			for (CloneIntersectionMatrix fragment : fragments) {
 				if (isTrue(fragment.cloneDigger) && isTrue(fragment.cpd) && isTrue(fragment.simian)) {
-					fullIntersection++;
+					fullIntersectionCount++;
 				} else if (isTrue(fragment.cloneDigger) && isTrue(fragment.cpd) && !isTrue(fragment.simian)) {
 					cloneDiggerAndCpdIntersectionCount++;
 				} else if (isTrue(fragment.cloneDigger) && !isTrue(fragment.cpd) && isTrue(fragment.simian)) {
@@ -106,17 +107,24 @@ public class CloneReports {
 			}
 
 		}
-		System.out.println(String.format("Somente Clone Digger : [%s]", justCloneDiggerCount));
-		System.out.println(String.format("Somente Simian : [%s]", justSimianCount));
-		System.out.println(String.format("Somente CPD : [%s]", justCpdCount));
+		System.out.println(String.format("Somente Clone Digger : [%s] - [%.1f]%%", justCloneDiggerCount, percentageOfSeedLoc(justCloneDiggerCount)));
+		System.out.println(String.format("Somente Simian : [%s] - [%.1f]%%", justSimianCount, percentageOfSeedLoc(justSimianCount)));
+		System.out.println(String.format("Somente CPD : [%s] - [%.1f]%%", justCpdCount, percentageOfSeedLoc(justCpdCount)));
 
-		System.out.println(String.format("Interseção : Clone Digger e CPD : [%s]", cloneDiggerAndCpdIntersectionCount));
-		System.out.println(String.format("Interseção : Clone Digger e Simian : [%s]", cloneDiggerAndSimianIntersectionCount));
-		System.out.println(String.format("Interseção : Simian e CPD : [%s]", simianAndCpdIntersectionCount));
-		System.out.println(String.format("Interseção : Todos : [%s]", fullIntersection));
+		System.out.println(String.format("Interseção : Clone Digger e CPD : [%s] - [%.1f]%%", cloneDiggerAndCpdIntersectionCount,
+				percentageOfSeedLoc(cloneDiggerAndCpdIntersectionCount)));
+		System.out.println(String.format("Interseção : Clone Digger e Simian : [%s] - [%.1f]%%", cloneDiggerAndSimianIntersectionCount,
+				percentageOfSeedLoc(cloneDiggerAndSimianIntersectionCount)));
+		System.out.println(String.format("Interseção : Simian e CPD : [%s] - [%.1f]%%", simianAndCpdIntersectionCount,
+				percentageOfSeedLoc(simianAndCpdIntersectionCount)));
+		System.out.println(String.format("Interseção : Todos : [%s] - [%.1f]%%", fullIntersectionCount, percentageOfSeedLoc(fullIntersectionCount)));
 	}
 
 	private boolean isTrue(Boolean value) {
 		return value != null && value;
+	}
+
+	private Double percentageOfSeedLoc(int loc) {
+		return loc * 100 / SEED_TOTAL_LOC;
 	}
 }

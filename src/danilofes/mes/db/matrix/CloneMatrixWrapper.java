@@ -45,22 +45,6 @@ public class CloneMatrixWrapper {
 			}
 
 			matrixIntersections.add(matrixIntersection);
-
-			CloneIntersectionMatrix matrixIntesection = getFragmentByLine(matrixIntersections, fragment.getLine());
-			if (matrixIntesection == null) {
-				matrixIntesection = new CloneIntersectionMatrix();
-				matrixIntesection.line = fragment.getLine();
-			}
-
-			if (ParseFiles.CLONEDIGGER.equals(appName)) {
-				matrixIntesection.cloneDigger = true;
-			} else if (ParseFiles.CPD.equals(appName)) {
-				matrixIntesection.cpd = true;
-			} else if (ParseFiles.SIMIAN.equals(appName)) {
-				matrixIntesection.simian = true;
-			}
-
-			matrixIntersections.add(matrixIntesection);
 			matrix.put(fragment.getPath(), matrixIntersections);
 		}
 

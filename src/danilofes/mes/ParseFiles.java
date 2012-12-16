@@ -28,7 +28,7 @@ public class ParseFiles {
 		// createCpdResults();
 		// createCloneDiggerResult();
 
-		// reports.printResultSummary();
+		reports.printResultSummary();
 
 		// reports.duplicationLOCProportion();
 		reports.similarFragmentsCloneDetectionFound();

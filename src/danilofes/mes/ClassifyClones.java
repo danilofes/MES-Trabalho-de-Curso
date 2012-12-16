@@ -513,7 +513,7 @@ public class ClassifyClones {
 		codeClone(6686).templating().parameterized().
 		cp("81-83 -> 52-54", "simian", 51734);
 		// Pequeno trecho com estrutura parecida, alterando apenas alguns tipos e constantes.
-		codeClone(6686).exactMatch().snippet().
+		codeClone(6686).customization().specialize().
 		cp("108-167 -> 97-156", "cpd", 72480).                                                        
 		cp("117-142 -> 106-131", "clonedigger", 115751).
 		cp("117-143 -> 106-132", "simian", 72476).                                              

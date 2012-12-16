@@ -6,7 +6,7 @@ import java.util.List;
 
 public class CloneClassification {
 
-	enum Criticity {FALSE_POSITIVE, CLONE, HARMFUL_CLONE}
+	enum Criticity {FALSE_POSITIVE, HARMLESS_CLONE, HARMFUL_CLONE}
 	
 	private static List<CloneClassification> items = new ArrayList<CloneClassification>();
 	
@@ -32,7 +32,7 @@ public class CloneClassification {
 		return cloneClassification;
 	}
 	public static CloneClassification codeClone(long id) {
-		CloneClassification cloneClassification = new CloneClassification(Criticity.CLONE, id);
+		CloneClassification cloneClassification = new CloneClassification(Criticity.HARMLESS_CLONE, id);
 		items.add(cloneClassification);
 		return cloneClassification;
 	}
@@ -62,68 +62,79 @@ public class CloneClassification {
 		return this;
 	}
 	public CloneClassification forking() {
-		this.type = "forking";
+		this.type = "Forking";
 		return this;
 	}
 
 	public CloneClassification templating() {
-		this.type = "templating";
+		this.type = "Templating";
 		return this;
 	}
 	public CloneClassification boilerPlating() {
-		this.subtype = "boiler-plating due language inexpressivness";
+		this.subtype = "Boiler-plating Due to Language Inexpressiveness";
 		return this;
 	}
 	public CloneClassification apiProtocol() {
-		this.subtype = "API library protocols";
+		this.subtype = "API/Library Protocols";
 		return this;
 	}
 	public CloneClassification languageIdioms() {
-		this.subtype = "general language or algorithmic idioms";
+		this.subtype = "General Language or Algorithmic Idioms";
 		return this;
 	}
 	public CloneClassification parameterized() {
-		this.subtype = "parameterized code";
+		this.subtype = "Parameterized Code";
 		return this;
 	}
 
 	public CloneClassification customization() {
-		this.type = "customization";
+		this.type = "Customization";
 		return this;
 	}
 	public CloneClassification bugWorkaround() {
-		this.subtype = "bug workaround";
+		this.subtype = "Bug Workarounds";
 		return this;
 	}
 	public CloneClassification specialize() {
-		this.subtype = "replicate and specialize";
+		this.subtype = "Replicate and Specialize";
 		return this;
 	}
 	
 	public CloneClassification exactMatch() {
-		this.type = "exact matches";
+		this.type = "Exact Matches";
 		return this;
 	}
 	public CloneClassification crossCutting() {
-		this.subtype = "cross-cutting concern";
+		this.subtype = "Cross-cutting Concerns";
 		return this;
 	}
 	public CloneClassification snippet() {
-		this.subtype = "verbatim snippet";
+		this.subtype = "Verbatim Snippets";
 		return this;
 	}
 
 	public static void printResults() {
 		System.out.println(items.size() + " resultados:");
 		for (CloneClassification cc : items) {
+			System.out.println("insert into dcc890.CloneClassification(size, nature, cat, subcat, simian, cpd, cdigger) values ");
 			System.out.println(cc);
+			System.out.println(";");
 		}
 		System.out.println("===========================");
 	}
 	
 	@Override
 	public String toString() {
-		return String.format("%d %s %s %s", this.clonedLines(), this.criticity.toString(), this.type, this.subtype);
+		return String.format(
+				"(%d, \'%s\', \'%s\', \'%s\', %d, %d, %d)",
+				this.clonedLines(),
+				this.criticity.toString(),
+				this.type,
+				this.subtype,
+				this.simian ? 1 : 0,
+				this.cpd ? 1 : 0,
+				this.cloneDigger ? 1 : 0
+				);
 	}
 	
 	public int clonedLines() {

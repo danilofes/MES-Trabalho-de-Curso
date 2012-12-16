@@ -20,6 +20,32 @@ public class CloneMatrixWrapper {
 				matrixIntersections = new ArrayList<CloneIntersectionMatrix>();
 			}
 
+			addAllLines(matrixIntersections, fragment, appName);
+
+			matrix.put(fragment.getPath(), matrixIntersections);
+		}
+
+	}
+
+	private void addAllLines(List<CloneIntersectionMatrix> matrixIntersections, GenericFragment fragment, String appName) {
+		for (int currentLine = fragment.getLine(); currentLine <= fragment.getEndLine(); currentLine++) {
+			CloneIntersectionMatrix matrixIntersection = getFragmentByLine(matrixIntersections, currentLine);
+
+			if (matrixIntersection == null) {
+				matrixIntersection = new CloneIntersectionMatrix();
+				matrixIntersection.line = fragment.getLine();
+			}
+
+			if (ParseFiles.CLONEDIGGER.equals(appName)) {
+				matrixIntersection.cloneDigger = true;
+			} else if (ParseFiles.CPD.equals(appName)) {
+				matrixIntersection.cpd = true;
+			} else if (ParseFiles.SIMIAN.equals(appName)) {
+				matrixIntersection.simian = true;
+			}
+
+			matrixIntersections.add(matrixIntersection);
+
 			CloneIntersectionMatrix matrixIntesection = getFragmentByLine(matrixIntersections, fragment.getLine());
 			if (matrixIntesection == null) {
 				matrixIntesection = new CloneIntersectionMatrix();

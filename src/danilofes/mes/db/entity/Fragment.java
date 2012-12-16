@@ -4,6 +4,7 @@ public abstract class Fragment {
 	private Integer id;
 	private Integer duplicationId;
 	protected int line;
+	private int endLine;
 	protected String path;
 
 	public Integer getId() {
@@ -20,6 +21,14 @@ public abstract class Fragment {
 
 	public void setDuplicationId(Integer duplicationId) {
 		this.duplicationId = duplicationId;
+	}
+
+	public int getEndLine() {
+		return endLine;
+	}
+
+	public void setEndLine(int endLine) {
+		this.endLine = endLine;
 	}
 
 	public abstract int getLine();

@@ -54,6 +54,7 @@ public class FragmentDAO extends DBFactory {
 		sql.append("f.id ");
 		sql.append(",f.duplicationId ");
 		sql.append(",f.line ");
+		sql.append(",f.endline ");
 		sql.append(",f.path ");
 		sql.append("from dcc890.Fragment f ");
 		sql.append("join dcc890.Duplication d ");
@@ -63,7 +64,7 @@ public class FragmentDAO extends DBFactory {
 		sql.append("where c.appname = ?");
 		PreparedStatement statement = CONNECTION.prepareStatement(sql.toString());
 		statement.setString(1, cloneResultName);
-		
+
 		ResultSet result = statement.executeQuery();
 
 		return this.parse(result);
@@ -76,6 +77,7 @@ public class FragmentDAO extends DBFactory {
 		sql.append("f.id ");
 		sql.append(",f.duplicationId ");
 		sql.append(",f.line ");
+		sql.append(",f.endline ");
 		sql.append(",f.path ");
 		sql.append("from dcc890.Fragment f ");
 		sql.append("where f.duplicationId = ?");
@@ -95,6 +97,7 @@ public class FragmentDAO extends DBFactory {
 				int id = result.getInt("id");
 				fragment.setId(id);
 				fragment.setLine(result.getInt("line"));
+				fragment.setEndLine(result.getInt("endline"));
 				fragment.setDuplicationId(result.getInt("duplicationId"));
 				fragment.setPath(result.getString("path"));
 

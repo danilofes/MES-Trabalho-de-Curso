@@ -161,5 +161,5 @@ insert into dcc890.CloneClassification(size, nature, cat, subcat, simian, cpd, c
 (3, 'HARMLESS_CLONE', 'Templating', 'Parameterized Code', 1, 0, 0)
 ;
 insert into dcc890.CloneClassification(size, nature, cat, subcat, simian, cpd, cdigger) values 
-(60, 'HARMLESS_CLONE', 'Customization', 'Replicate and Specialize', 1, 1, 1)
+(60, 'HARMFUL_CLONE', 'Customization', 'Replicate and Specialize', 1, 1, 1)
 ;

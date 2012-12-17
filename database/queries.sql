@@ -55,4 +55,43 @@ join dcc890.CloneResult rs on (rs.id = du.cloneResultId)
 where fp.id = 6686
 order by f1.line;
 
+select cat, subcat, count(*), sum(simian), sum(cpd), sum(cdigger)
+from dcc890.CloneClassification group by cat, subcat;
+
+select 
+  nature,
+  count(*),
+  100 * (double(count(*)) / 51),
+  sum(simian),
+  100 * (double(sum(simian)) / 35),
+  sum(cpd),
+  100 * (double(sum(cpd)) / 38),
+  sum(cdigger),
+  100 * (double(sum(cdigger)) / 8)
+from dcc890.CloneClassification group by nature;
+
+
+select
+  ((c1.size/20)*20),
+  ((c1.size/20)*20)+19,
+  count(*),
+  100 * double(sum(case when nature = 'FALSE_POSITIVE' then 1 else 0 end)) / count(*),
+  100 * double(sum(case when nature = 'HARMLESS_CLONE' then 1 else 0 end)) / count(*),
+  100 * double(sum(case when nature = 'HARMFUL_CLONE' then 1 else 0 end)) / count(*)
+from dcc890.CloneClassification c1 group by ((c1.size/20)*20), ((c1.size/20)*20)+19;
+
+
+select * from dcc890.CloneClassification where size > 59;
+
+select sum(simian), sum(cpd), sum(cdigger) from dcc890.CloneClassification;
+
+
+
+1          |2          |3          |4                     |5                     |6                     
+--------------------------------------------------------------------------------------------------------
+0          |19         |31         |48.38709677419355     |35.483870967741936    |16.129032258064516    
+20         |39         |17         |11.764705882352942    |76.47058823529412     |11.764705882352942    
+40         |59         |2          |0.0                   |50.0                  |50.0                  
+60         |79         |1          |0.0                   |0.0                   |100.0
+
 
